@@ -1,7 +1,7 @@
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a third-semester student at STMIK Widya Utama Purwokerto.</h2>
 
 ###
-
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=github-readme-stats)](https://github.com/idlanyor/github-readme-stats)
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=idlanyor&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=id&hide_border=false" height="200" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=idlanyor&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="200" alt="languages graph"  />
