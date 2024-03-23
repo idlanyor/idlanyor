@@ -16,7 +16,9 @@
 </div>
 
 <div align="center">
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+  <a href="https://github.com/idlanyor/github-readme-stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=idlanyor&layout=compact" alt="Top Languages">
+</a>
   <img src="https://github-readme-stats.vercel.app/api?username=idlanyor&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=id&hide_border=false" height="200" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=idlanyor&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="200" alt="languages graph"  />
 </div>
