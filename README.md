@@ -1,5 +1,12 @@
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a third-semester student at STMIK Widya Utama Purwokerto.</h2>
 
+<h3 align="left">👩‍💻  About Me</h3>
+
+###
+
+<p align="left">I'm Roynaldi <br><br>- 🔭 I’m working as Freelancer & Graphic Designer<br>- 📚 I'm currently learning Software Engineering<br>- ⚡ In my free time I always increase my skill with `ngoding`</p>
+
+
 <div align="center">
   <a href="https://github.com/idlanyor/teleexpress">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
@@ -15,7 +22,17 @@
   </a>
 </div>
 
-<h1 align="center">Ingfo</h1> 
+###
+
+<h1 align="center">🔥 My Stats :</h1>
+
+###
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="500" alt="streak graph"  />
+</div>
+
+###
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=idlanyor&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=id&hide_border=false" height="200" alt="stats graph"  />
@@ -61,23 +78,7 @@
 
 
 
-<h3 align="left">👩‍💻  About Me</h3>
 
-###
-
-<p align="left">I'm Roynaldi <br><br>- 🔭 I’m working as Freelancer & Graphic Designer<br>- 📚 I'm currently learning Software Engineering<br>- ⚡ In my free time I always increase my skill with `ngoding`</p>
-
-###
-
-<h1 align="center">🔥 My Stats :</h1>
-
-###
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="500" alt="streak graph"  />
-</div>
-
-###
 
 <h1 align="center">Visitor</h1>
 
