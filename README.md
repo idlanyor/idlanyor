@@ -2,23 +2,20 @@
 
 <div align="center">
   <a href="https://github.com/idlanyor/teleexpress">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true" alt="Telegram" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
   </a>
   <a href="https://github.com/idlanyor/wbot">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wbot" alt="WBot" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wbot&theme=dracula" alt="WBot" />
   </a>
   <a href="https://github.com/idlanyor/backend-2">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2" alt="Backend PPDB" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2&theme=dracula" alt="Backend PPDB" />
   </a>
   <a href="https://github.com/idlanyor/diciptakan-karena-gabut">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=diciptakan-karena-gabut" alt="Frontend-ppdb" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=diciptakan-karena-gabut&theme=dracula" alt="Frontend-ppdb" />
   </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/idlanyor/github-readme-stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=idlanyor&layout=compact" alt="Top Languages">
-</a>
   <img src="https://github-readme-stats.vercel.app/api?username=idlanyor&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=id&hide_border=false" height="200" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=idlanyor&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="200" alt="languages graph"  />
 </div>
