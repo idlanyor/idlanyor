@@ -59,7 +59,7 @@
 ###
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="250" alt="streak graph"  />
+  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="300" alt="streak graph"  />
 </div>
 
 <div align="center">
