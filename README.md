@@ -1,3 +1,4 @@
+```bash
 > Hello World! My name is Roynaldi 👋
 
 🎓 I'm a third-semester student at STMIK Widya Utama Purwokerto.
@@ -11,3 +12,4 @@
 $ git clone https://github.com/idlanyor
 
 Cloning into 'idlanyor'...
+```
