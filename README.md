@@ -1,4 +1,4 @@
-<h2 align="center">Hi 👋! My name is Roynaldi and I'm a third-semester student at STMIK Widya Utama Purwokerto.</h2>
+<h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo" />
