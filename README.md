@@ -1,3 +1,6 @@
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=idlanyor&label=Profile%20views&color=0e75b6&style=flat" alt="idlanyor" /> </p>
+
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=idlanyor" alt="idlanyor" /></a> </p>
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
 
 <div align="center">
