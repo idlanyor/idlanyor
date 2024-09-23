@@ -1,5 +1,5 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=idlanyor&label=Profile%20views&color=0e75b6&style=flat" alt="idlanyor" /> </p>
-![trophy](https://github-profile-trophy.vercel.app/?username=idlanyor&theme=onedark)](https://github.com/idlanyor/github-profile-trophy)
+[!trophy](https://github-profile-trophy.vercel.app/?username=idlanyor&theme=onedark)](https://github.com/idlanyor/github-profile-trophy)
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
 
 <div align="center">
