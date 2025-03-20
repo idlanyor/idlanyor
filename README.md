@@ -1,8 +1,4 @@
-<img align="center" width="200" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg" alt="Palestine">
-
-<div align="center">
-    [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=idlanyor&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/idlanyor)
-</div>
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=idlanyor&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/idlanyor)
 
 ## 🏆 GitHub Profile Trophy
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
