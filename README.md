@@ -43,8 +43,8 @@
   <a href="https://github.com/idlanyor/teleexpress">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
   </a>
-  <a href="https://github.com/idlanyor/wbot">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wbot&theme=dracula" alt="WBot" />
+  <a href="https://github.com/idlanyor/kanata-reborn">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=kanata-reborn&theme=dracula" alt="Kanata V3" />
   </a>
   <a href="https://github.com/idlanyor/backend-2">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2&theme=dracula" alt="Backend PPDB" />
