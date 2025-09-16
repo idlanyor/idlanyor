@@ -1,9 +1,9 @@
+[![An image of @roynaldi3301's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/roynaldi3301)](https://holopin.io/@roynaldi3301)
 [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=idlanyor&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/idlanyor)
 
 ## 🏆 GitHub Profile Trophy
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
     <img src="https://github-profile-trophy.vercel.app/?username=latesturl&theme=dracula&row=2&column=3&margin-w=8&margin-h=8&no-frame=true&no-bg=true" alt="GitHub Trophies" style="width: 100%; max-width: 400px;">
-    [![An image of @roynaldi3301's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/roynaldi3301)](https://holopin.io/@roynaldi3301)
 </div>
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
 
