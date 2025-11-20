@@ -1,185 +1,113 @@
-# Portfolio Roynaldi - React + Vite + TailwindCSS v4
+[![An image of @roynaldi3301's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/roynaldi3301)](https://holopin.io/@roynaldi3301)
 
-Portfolio website pribadi yang dibangun menggunakan React, Vite, dan TailwindCSS v4.
+[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=idlanyor&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/idlanyor)
 
-## 🚀 Tech Stack
+## 🏆 GitHub Profile Trophy
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+    <img src="https://github-profile-trophy.vercel.app/?username=latesturl&theme=dracula&row=2&column=3&margin-w=8&margin-h=8&no-frame=true&no-bg=true" alt="GitHub Trophies" style="width: 100%; max-width: 400px;">
+</div>
+<h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
 
-- **React 19** - UI Library
-- **Vite 7** - Build Tool & Dev Server
-- **TailwindCSS v4** - Utility-First CSS Framework
-- **Font Awesome 6** - Icons
-- **Google Fonts (Poppins)** - Typography
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" alt="php logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo" />
+  <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/tailwindcss/tailwindcss-original.svg" height="30" alt="tailwindcss logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" height="30" alt="bootstrap logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="30" alt="flutter logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="30" alt="dart logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="c++ logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo" />
+</div>
 
-## ✨ Features
 
-- ⚡ Lightning-fast performance dengan Vite
-- 🎨 Modern & responsive design
-- 🌙 Dark mode (default)
-- 📱 Mobile-friendly
-- 🎭 Smooth animations & transitions
-- 🎯 SEO optimized
-- 💅 Beautiful gradient effects
-- 🔥 Component-based architecture
 
-## 📂 Project Structure
+<h3 align="left">👩‍💻  About Me</h3>
 
-```
-bioku/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx      # Navigation bar dengan theme toggle
-│   │   ├── Hero.jsx        # Hero section dengan stats
-│   │   ├── About.jsx       # About section dengan info cards
-│   │   ├── Skills.jsx      # Skills & technologies
-│   │   ├── Projects.jsx    # Featured projects
-│   │   ├── Contact.jsx     # Contact & social links
-│   │   └── Footer.jsx      # Footer section
-│   ├── App.jsx             # Main app component
-│   ├── main.jsx            # Entry point
-│   └── index.css           # Global styles & TailwindCSS
-├── index.html              # HTML template
-├── vite.config.js          # Vite configuration
-└── package.json            # Dependencies
-```
+###
 
-## 🛠️ Installation & Setup
+<p align="left">I'm Roynaldi <br><br>- 🔭 I’m working as Freelancer & Graphic Designer<br>- ⚡ In my free time I always increase my skill with `ngoding`</p>
 
-1. **Clone repository**
-   ```bash
-   git clone <repository-url>
-   cd bioku
-   ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+<div align="center">
+  <a href="https://github.com/idlanyor/teleexpress">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
+  </a>
+  <a href="https://github.com/idlanyor/kanata-reborn">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=kanata-reborn&theme=dracula" alt="Kanata V3" />
+  </a>
+  <a href="https://github.com/idlanyor/backend-2">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2&theme=dracula" alt="Backend PPDB" />
+  </a>
+  <a href="https://github.com/idlanyor/diciptakan-karena-gabut">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=diciptakan-karena-gabut&theme=dracula" alt="Frontend-ppdb" />
+  </a>
+</div>
 
-3. **Run development server**
-   ```bash
-   npm run dev
-   ```
-   Server akan berjalan di `http://localhost:5173/`
+###
 
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
+<h1 align="center">🔥 My Stats :</h1>
 
-5. **Preview production build**
-   ```bash
-   npm run preview
-   ```
+###
 
-## 🎨 Customization
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="300" alt="streak graph"  />
+</div>
 
-### Colors
-Warna utama dapat diubah di `src/index.css`:
-```css
-@theme {
-  --color-primary: #6366f1;    /* Indigo */
-  --color-secondary: #8b5cf6;  /* Purple */
-  --color-accent: #ec4899;     /* Pink */
-}
-```
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=idlanyor&theme=2077" alt="Profile Details" style="width: 100%; max-width: 500px;">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=idlanyor&theme=2077" alt="Repos per Language" style="width: 48%; max-width: 300px;">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=idlanyor&theme=2077" alt="Most Commit Language" style="width: 48%; max-width: 300px;">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=idlanyor&theme=2077" alt="Stats" style="width: 48%; max-width: 300px;">
+    <img src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=idlanyor&theme=2077&utcOffset=8" alt="Productive Time" style="width: 48%; max-width: 300px;">
+</div>
 
-### Content
-- **Personal Info**: Edit di masing-masing component file
-- **Projects**: Update array `projects` di `src/components/Projects.jsx`
-- **Skills**: Update array `skillCategories` di `src/components/Skills.jsx`
-- **Social Links**: Update array `socialLinks` di `src/components/Contact.jsx`
+###
 
-## 📝 Components Overview
+<div align="center">
+  <a href="YOUR_INSTAGRAM_LINK">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+  </a>
+  <a href="YOUR_TWITCH_LINK">
+    <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=0000FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch logo"  />
+  </a>
+  <a href="YOUR_DISCORD_LINK">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
+  </a>
+  <a href="YOUR_EMAIL_LINK">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  </a>
+  <a href="YOUR_LINKEDIN_LINK">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+</div>
 
-### Navbar
-- Fixed navigation bar
-- Responsive mobile menu
-- Theme toggle button
-- Smooth scroll navigation
 
-### Hero
-- Animated profile image
-- GitHub stats (repos, stars, followers)
-- Call-to-action buttons
-- Gradient background effects
 
-### About
-- Info cards (Education, Work, Location, Website)
-- Personal description
-- GitHub achievements badges
 
-### Skills
-- Categorized skills (Languages, Frontend, Mobile, Tools)
-- Icon-based skill items
-- Hover effects
 
-### Projects
-- Featured GitHub projects
-- Project cards with stats
-- Links to repositories
-- Tech stack badges
+<h1 align="center">Visitor</h1>
 
-### Contact
-- Social media links
-- Email CTA
-- Animated hover effects
+###
 
-### Footer
-- Copyright information
-- Personal quote
+<div align="center">
+  <img src="https://profile-counter.glitch.me/idlanyor/count.svg?"  />
+</div>
 
-## 🌟 Key Features Explained
-
-### TailwindCSS v4
-Project ini menggunakan TailwindCSS v4 (next) dengan konfigurasi modern:
-- Import langsung via `@import "tailwindcss"`
-- Custom theme via `@theme` directive
-- Vite plugin integration
-
-### Animations
-Custom animations didefinisikan di `index.css`:
-- `animate-float` - Floating effect untuk profile image
-- `animate-bounce-custom` - Custom bounce untuk scroll indicator
-- Gradient text effects
-
-### Responsive Design
-- Mobile-first approach
-- Breakpoints: `md:` (768px), `lg:` (1024px)
-- Responsive grid layouts
-- Mobile hamburger menu
-
-## 🚀 Deployment
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-# Upload folder 'dist' ke Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Deploy folder 'dist' ke gh-pages branch
-```
-
-## 📄 License
-
-MIT License - Feel free to use this template for your own portfolio!
-
-## 👨‍💻 Author
-
-**Roynaldi**
-- GitHub: [@idlanyor](https://github.com/idlanyor)
-- Website: [roidev.my.id](https://roidev.my.id)
-
----
-
-Made with ❤️ and ⚡ by Roynaldi
-
-*"Let's Play the game like coding"*
+###
