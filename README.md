@@ -6,7 +6,7 @@
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
     <img src="https://github-profile-trophy.vercel.app/?username=latesturl&theme=dracula&row=2&column=3&margin-w=8&margin-h=8&no-frame=true&no-bg=true" alt="GitHub Trophies" style="width: 100%; max-width: 400px;">
 </div>
-<h2 align="center">Hi 👋! My name is Roynaldi and I'm a 4th-semester student at STMIK Widya Utama Purwokerto.</h2>
+<h2 align="center">Hi 👋! My name is Roynaldi and I'm a junior developer.</h2>
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo" />
