@@ -11,28 +11,28 @@ const Contact = () => {
         {
             icon: 'fas fa-globe',
             name: 'Website',
-            link: 'https://roidev.my.id',
+            link: 'https://antidonasi.web.id',
             color: 'hover:text-blue-400',
             ariaLabel: 'Visit my personal website'
         },
         {
             icon: 'fab fa-instagram',
             name: 'Instagram',
-            link: 'https://instagram.com/idlanyor',
+            link: 'https://instagram.com/kang.potokopi',
             color: 'hover:text-pink-500',
             ariaLabel: 'Follow me on Instagram'
         },
         {
-            icon: 'fab fa-discord',
-            name: 'Discord',
-            link: 'https://discord.com/users/idlanyor',
+            icon: 'fab fa-facebook',
+            name: 'Facebook',
+            link: 'https://facebook.com/kang.potokopi',
             color: 'hover:text-indigo-500',
-            ariaLabel: 'Chat with me on Discord'
+            ariaLabel: 'Chat with me on Facebook'
         },
     ];
 
     // Email configuration
-    const email = 'contact@roidev.my.id';
+    const email = 'support@antidonasi.web.id';
 
     return (
         <section
