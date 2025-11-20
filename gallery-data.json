@@ -1,0 +1,184 @@
+{
+  "albums": [
+    {
+      "id": "album-1",
+      "category": "design",
+      "icon": "fas fa-palette",
+      "title": "Graphic Design Collection",
+      "itemCount": 25,
+      "categoryLabel": "Design",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400",
+          "title": "Poster Design",
+          "description": "Event Promotion"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400",
+          "title": "Social Media",
+          "description": "Instagram Post"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=400",
+          "title": "Flyer Design",
+          "description": "Business Promotion"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1600096194534-95cf5ece04cf?w=400",
+          "title": "Banner Design",
+          "description": "Web Banner"
+        }
+      ]
+    },
+    {
+      "id": "album-2",
+      "category": "ui-ux",
+      "icon": "fas fa-mobile-alt",
+      "title": "Mobile App Designs",
+      "itemCount": 18,
+      "categoryLabel": "UI/UX",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400",
+          "title": "E-Commerce App",
+          "description": "Mobile UI Design"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400",
+          "title": "Food Delivery",
+          "description": "App Interface"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400",
+          "title": "Banking App",
+          "description": "Financial UI"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1559028006-448665bd42f8?w=400",
+          "title": "Social Media",
+          "description": "Mobile Interface"
+        }
+      ]
+    },
+    {
+      "id": "album-3",
+      "category": "photography",
+      "icon": "fas fa-camera",
+      "title": "Photography Portfolio",
+      "itemCount": 32,
+      "categoryLabel": "Photography",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400",
+          "title": "Landscape",
+          "description": "Nature Photography"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400",
+          "title": "Portrait",
+          "description": "Studio Session"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400",
+          "title": "Street",
+          "description": "Urban Photography"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=400",
+          "title": "Sunset",
+          "description": "Golden Hour"
+        }
+      ]
+    },
+    {
+      "id": "album-4",
+      "category": "branding",
+      "icon": "fas fa-copyright",
+      "title": "Brand Identity Projects",
+      "itemCount": 15,
+      "categoryLabel": "Branding",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400",
+          "title": "Logo Design",
+          "description": "Corporate Identity"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=400",
+          "title": "Brand Guide",
+          "description": "Visual Identity"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=400",
+          "title": "Business Card",
+          "description": "Corporate Design"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400",
+          "title": "Letterhead",
+          "description": "Stationery Design"
+        }
+      ]
+    },
+    {
+      "id": "album-5",
+      "category": "design",
+      "icon": "fas fa-paint-brush",
+      "title": "Social Media Graphics",
+      "itemCount": 42,
+      "categoryLabel": "Design",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400",
+          "title": "Instagram Post",
+          "description": "Social Content"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400",
+          "title": "Facebook Banner",
+          "description": "Cover Design"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400",
+          "title": "Twitter Header",
+          "description": "Profile Banner"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=400",
+          "title": "LinkedIn Post",
+          "description": "Professional Content"
+        }
+      ]
+    },
+    {
+      "id": "album-6",
+      "category": "ui-ux",
+      "icon": "fas fa-desktop",
+      "title": "Website UI Designs",
+      "itemCount": 28,
+      "categoryLabel": "UI/UX",
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400",
+          "title": "Landing Page",
+          "description": "Modern Design"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400",
+          "title": "Dashboard",
+          "description": "Admin Panel"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400",
+          "title": "Portfolio Site",
+          "description": "Personal Website"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400",
+          "title": "E-Commerce",
+          "description": "Online Store"
+        }
+      ]
+    }
+  ]
+}

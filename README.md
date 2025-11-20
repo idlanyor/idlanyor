@@ -1,173 +1,185 @@
-# Portfolio Bio Website - Roynaldi
+# Portfolio Roynaldi - React + Vite + TailwindCSS v4
 
-Website bio yang modern, responsif, dan interaktif untuk menampilkan profil GitHub Anda.
+Portfolio website pribadi yang dibangun menggunakan React, Vite, dan TailwindCSS v4.
 
-## Fitur
+## 🚀 Tech Stack
 
-- **Responsif**: Tampilan sempurna di semua perangkat (desktop, tablet, mobile)
-- **Modern Design**: Desain dengan gradient warna-warni dan animasi smooth
-- **Interaktif**: Animasi scroll, typing effect, counter animation, dan parallax effect
-- **SEO Friendly**: Meta tags yang optimal untuk search engines
-- **Performance**: Loading cepat dengan optimasi assets
+- **React 19** - UI Library
+- **Vite 7** - Build Tool & Dev Server
+- **TailwindCSS v4** - Utility-First CSS Framework
+- **Font Awesome 6** - Icons
+- **Google Fonts (Poppins)** - Typography
 
-## Teknologi yang Digunakan
+## ✨ Features
 
-- HTML5
-- CSS3 (dengan CSS Variables dan Flexbox/Grid)
-- Vanilla JavaScript (ES6+)
-- Font Awesome Icons
-- Google Fonts (Poppins)
+- ⚡ Lightning-fast performance dengan Vite
+- 🎨 Modern & responsive design
+- 🌙 Dark mode (default)
+- 📱 Mobile-friendly
+- 🎭 Smooth animations & transitions
+- 🎯 SEO optimized
+- 💅 Beautiful gradient effects
+- 🔥 Component-based architecture
 
-## Struktur File
+## 📂 Project Structure
 
 ```
 bioku/
-├── index.html      # File HTML utama
-├── style.css       # Styling dan responsive design
-├── script.js       # Interaktivitas dan animasi
-└── README.md       # Dokumentasi
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx      # Navigation bar dengan theme toggle
+│   │   ├── Hero.jsx        # Hero section dengan stats
+│   │   ├── About.jsx       # About section dengan info cards
+│   │   ├── Skills.jsx      # Skills & technologies
+│   │   ├── Projects.jsx    # Featured projects
+│   │   ├── Contact.jsx     # Contact & social links
+│   │   └── Footer.jsx      # Footer section
+│   ├── App.jsx             # Main app component
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global styles & TailwindCSS
+├── index.html              # HTML template
+├── vite.config.js          # Vite configuration
+└── package.json            # Dependencies
 ```
 
-## Cara Menggunakan
+## 🛠️ Installation & Setup
 
-1. **Buka langsung di browser**:
+1. **Clone repository**
    ```bash
-   # Buka file index.html di browser favorit Anda
-   open index.html  # macOS
-   xdg-open index.html  # Linux
-   start index.html  # Windows
+   git clone <repository-url>
+   cd bioku
    ```
 
-2. **Atau gunakan Live Server** (recommended):
-   - Install Live Server extension di VS Code
-   - Klik kanan pada index.html
-   - Pilih "Open with Live Server"
-
-3. **Atau gunakan Python HTTP Server**:
+2. **Install dependencies**
    ```bash
-   # Python 3
-   python -m http.server 8000
-
-   # Kemudian buka browser dan akses:
-   # http://localhost:8000
+   npm install
    ```
 
-## Kustomisasi
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+   Server akan berjalan di `http://localhost:5173/`
 
-### Mengubah Informasi Pribadi
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-Edit file `index.html` dan ubah bagian berikut:
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
 
-1. **Profile Picture**: Ganti URL di bagian hero image
-2. **Social Links**: Update href pada section contact
-3. **Email**: Ubah email di tombol "Email Me"
-4. **Projects**: Tambah/edit proyek di section projects
+## 🎨 Customization
 
-### Mengubah Warna
-
-Edit file `style.css` pada bagian CSS Variables:
-
+### Colors
+Warna utama dapat diubah di `src/index.css`:
 ```css
-:root {
-    --primary-color: #6366f1;    /* Warna utama */
-    --secondary-color: #8b5cf6;  /* Warna sekunder */
-    --accent-color: #ec4899;     /* Warna aksen */
+@theme {
+  --color-primary: #6366f1;    /* Indigo */
+  --color-secondary: #8b5cf6;  /* Purple */
+  --color-accent: #ec4899;     /* Pink */
 }
 ```
 
-### Menambah Section Baru
+### Content
+- **Personal Info**: Edit di masing-masing component file
+- **Projects**: Update array `projects` di `src/components/Projects.jsx`
+- **Skills**: Update array `skillCategories` di `src/components/Skills.jsx`
+- **Social Links**: Update array `socialLinks` di `src/components/Contact.jsx`
 
-Ikuti pattern yang ada di HTML dan tambahkan section dengan struktur:
+## 📝 Components Overview
 
-```html
-<section id="nama-section" class="nama-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Judul Section</h2>
-            <p class="section-subtitle">Subtitle</p>
-        </div>
-        <!-- Konten section -->
-    </div>
-</section>
+### Navbar
+- Fixed navigation bar
+- Responsive mobile menu
+- Theme toggle button
+- Smooth scroll navigation
+
+### Hero
+- Animated profile image
+- GitHub stats (repos, stars, followers)
+- Call-to-action buttons
+- Gradient background effects
+
+### About
+- Info cards (Education, Work, Location, Website)
+- Personal description
+- GitHub achievements badges
+
+### Skills
+- Categorized skills (Languages, Frontend, Mobile, Tools)
+- Icon-based skill items
+- Hover effects
+
+### Projects
+- Featured GitHub projects
+- Project cards with stats
+- Links to repositories
+- Tech stack badges
+
+### Contact
+- Social media links
+- Email CTA
+- Animated hover effects
+
+### Footer
+- Copyright information
+- Personal quote
+
+## 🌟 Key Features Explained
+
+### TailwindCSS v4
+Project ini menggunakan TailwindCSS v4 (next) dengan konfigurasi modern:
+- Import langsung via `@import "tailwindcss"`
+- Custom theme via `@theme` directive
+- Vite plugin integration
+
+### Animations
+Custom animations didefinisikan di `index.css`:
+- `animate-float` - Floating effect untuk profile image
+- `animate-bounce-custom` - Custom bounce untuk scroll indicator
+- Gradient text effects
+
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: `md:` (768px), `lg:` (1024px)
+- Responsive grid layouts
+- Mobile hamburger menu
+
+## 🚀 Deployment
+
+### Vercel
+```bash
+npm install -g vercel
+vercel
 ```
 
-## Fitur Interaktif
+### Netlify
+```bash
+npm run build
+# Upload folder 'dist' ke Netlify
+```
 
-- **Smooth Scrolling**: Navigasi dengan scroll yang smooth
-- **Mobile Menu**: Hamburger menu untuk perangkat mobile
-- **Typing Effect**: Efek mengetik pada subtitle hero
-- **Counter Animation**: Animasi angka pada statistik
-- **Scroll Animations**: Elemen muncul saat di-scroll
-- **Parallax Effect**: Efek parallax pada hero section
-- **Floating Particles**: Partikel mengambang di background
-- **Scroll to Top Button**: Tombol untuk kembali ke atas
+### GitHub Pages
+```bash
+npm run build
+# Deploy folder 'dist' ke gh-pages branch
+```
 
-## Browser Support
+## 📄 License
 
-Website ini kompatibel dengan browser modern:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+MIT License - Feel free to use this template for your own portfolio!
 
-## Deploy ke Hosting
+## 👨‍💻 Author
 
-### GitHub Pages (Gratis)
-
-1. Buat repository baru di GitHub
-2. Push semua file ke repository
-3. Pergi ke Settings > Pages
-4. Pilih branch main dan folder root
-5. Website akan live di `https://username.github.io/repo-name`
-
-### Netlify (Gratis)
-
-1. Drag & drop folder ke netlify.com
-2. Atau connect dengan GitHub repository
-3. Website akan auto-deploy
-
-### Vercel (Gratis)
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel` di folder project
-3. Follow instructions
-
-## Tips
-
-- **Gambar**: Untuk loading lebih cepat, optimasi ukuran gambar
-- **Fonts**: Jika ingin offline, download fonts dan host locally
-- **Icons**: Bisa replace Font Awesome dengan icons lain
-- **Performance**: Minify CSS dan JS untuk production
-
-## Customisasi Lanjutan
-
-### Tambah Dark/Light Mode Toggle
-
-Tambahkan toggle button dan JavaScript untuk switch theme.
-
-### Integrasi dengan GitHub API
-
-Fetch repositories secara dinamis menggunakan GitHub API.
-
-### Tambah Blog Section
-
-Gunakan Markdown parser atau CMS headless seperti Strapi.
-
-### Contact Form
-
-Tambahkan form dengan backend (FormSpree, Netlify Forms, atau custom backend).
-
-## Lisensi
-
-Free to use untuk personal portfolio.
-
-## Kontak
-
-Dibuat dengan ❤️ untuk Roynaldi
-
+**Roynaldi**
 - GitHub: [@idlanyor](https://github.com/idlanyor)
 - Website: [roidev.my.id](https://roidev.my.id)
 
 ---
 
-**Note**: Jangan lupa update social media links dan email di file HTML sebelum deploy!
+Made with ❤️ and ⚡ by Roynaldi
+
+*"Let's Play the game like coding"*
