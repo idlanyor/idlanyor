@@ -24,20 +24,20 @@ const Hero = () => {
 
   // Default/Fallback data
   const stats = [
-    { 
-      icon: 'fas fa-code', 
-      value: loading ? '...' : data?.user?.public_repos || '185+', 
-      label: 'Repositories' 
+    {
+      icon: 'fas fa-code',
+      value: loading ? '...' : data?.user?.public_repos || '185+',
+      label: 'Repositories'
     },
-    { 
-      icon: 'fas fa-star', 
-      value: loading ? '...' : data?.user?.total_stars || '52', 
-      label: 'Stars' 
+    {
+      icon: 'fas fa-star',
+      value: loading ? '...' : data?.user?.total_stars || '52',
+      label: 'Stars'
     },
-    { 
-      icon: 'fas fa-users', 
-      value: loading ? '...' : data?.user?.followers || '33', 
-      label: 'Followers' 
+    {
+      icon: 'fas fa-users',
+      value: loading ? '...' : data?.user?.followers || '33',
+      label: 'Followers'
     },
   ];
 
@@ -85,7 +85,7 @@ const Hero = () => {
               Hi, I'm <span className="gradient-text">{data?.user?.name || 'Roynaldi'}</span>
             </h1>
             <h2 className="hero-subtitle">
-              Mandor AI & Junior Graphic Designer
+              Mandor AI & Tukang Fotokopi
             </h2>
             <p className="hero-description">
               {data?.user?.bio || '"Let\'s Play the game like coding" - Seorang tukang fotokopi yang terobsesi dengan koding dan grafis. berdedikasi untuk meningkatkan kemampuan programming dan desain grafis melalui coba coba.'}
