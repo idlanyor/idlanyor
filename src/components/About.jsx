@@ -85,7 +85,7 @@ const About = () => {
                             {data?.user?.bio ? (
                                 data.user.bio
                             ) : (
-                                "Saya adalah seorang Full Stack Developer yang passionate dalam mengembangkan aplikasi web dan mobile. Dengan pengalaman sebagai freelancer dan graphic designer, saya menggabungkan kreativitas desain dengan kemampuan teknis programming untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga estetis."
+                                "Saya adalah seorang Mandor AI yang passionate dalam mengembangkan aplikasi web dan mobile. Dengan pengalaman sebagai freelancer dan graphic designer, saya menggabungkan kreativitas desain dengan kemampuan teknis programming untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga estetis."
                             )}
                         </p>
                         <p>

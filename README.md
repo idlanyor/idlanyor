@@ -42,7 +42,7 @@
 
 ###
 
-<p align="left">I'm Roynaldi <br><br>- 🔭 I’m working as Freelancer & Graphic Designer<br>- ⚡ In my free time I always increase my skill with `ngoding`</p>
+<p align="left">I'm Roynaldi <br><br>- 🔭 I’m working as Freelancer & Tukang Fotokopi<br>- ⚡ In my free time I always increase my skill with `ngoding`</p>
 
 
 <div align="center">
