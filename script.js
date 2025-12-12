@@ -241,7 +241,7 @@ buttons.forEach(button => {
 const skillItems = document.querySelectorAll('.skill-item');
 skillItems.forEach(skill => {
     skill.addEventListener('mouseenter', function() {
-        this.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2))';
+        this.style.background = 'linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(13, 148, 136, 0.2))';
     });
 
     skill.addEventListener('mouseleave', function() {
@@ -269,7 +269,7 @@ scrollTopBtn.style.cssText = `
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 999;
-    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
 `;
 
 document.body.appendChild(scrollTopBtn);
@@ -307,7 +307,7 @@ function createParticle() {
         position: absolute;
         width: ${Math.random() * 5 + 2}px;
         height: ${Math.random() * 5 + 2}px;
-        background: rgba(99, 102, 241, ${Math.random() * 0.5 + 0.2});
+        background: rgba(20, 184, 166, ${Math.random() * 0.5 + 0.2});
         border-radius: 50%;
         left: ${Math.random() * 100}%;
         top: ${Math.random() * 100}%;
@@ -356,8 +356,8 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Console Easter Egg
-console.log('%c🚀 Welcome to Roynaldi\'s Portfolio!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
-console.log('%c👨‍💻 Interested in the code? Check out my GitHub: https://github.com/idlanyor', 'color: #8b5cf6; font-size: 14px;');
+console.log('%c🚀 Welcome to Roynaldi\'s Portfolio!', 'color: #14b8a6; font-size: 20px; font-weight: bold;');
+console.log('%c👨‍💻 Interested in the code? Check out my GitHub: https://github.com/idlanyor', 'color: #0d9488; font-size: 14px;');
 console.log('%c💼 Let\'s connect and build something amazing together!', 'color: #ec4899; font-size: 14px;');
 
 // Loading animation

@@ -1,7 +1,7 @@
 /* Root Variables - Dark Mode (Default) */
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
+    --primary-color: #14b8a6;
+    --secondary-color: #0d9488;
     --accent-color: #ec4899;
     --dark-bg: #0f172a;
     --darker-bg: #020617;
@@ -10,19 +10,19 @@
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
     --border-color: #334155;
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient-1: linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #ec4899 100%);
     --gradient-2: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+    --shadow-glow: 0 0 20px rgba(20, 184, 166, 0.3);
     --transition: all 0.3s ease;
 }
 
 /* Light Mode Variables */
 [data-theme="light"] {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
+    --primary-color: #14b8a6;
+    --secondary-color: #0d9488;
     --accent-color: #ec4899;
     --dark-bg: #f8fafc;
     --darker-bg: #ffffff;
@@ -31,12 +31,12 @@
     --text-secondary: #334155;
     --text-muted: #64748b;
     --border-color: #e2e8f0;
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient-1: linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #ec4899 100%);
     --gradient-2: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
+    --shadow-glow: 0 0 20px rgba(20, 184, 166, 0.15);
 }
 
 /* Reset & Base Styles */
@@ -196,8 +196,8 @@ body {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(13, 148, 136, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -769,8 +769,8 @@ section {
 
 [data-theme="light"] .hero-particles {
     background:
-        radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(13, 148, 136, 0.05) 0%, transparent 50%);
 }
 
 [data-theme="light"] .info-card,
@@ -789,7 +789,7 @@ section {
 }
 
 [data-theme="light"] .image-wrapper img {
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 40px rgba(20, 184, 166, 0.2);
 }
 
 /* Responsive Design */
