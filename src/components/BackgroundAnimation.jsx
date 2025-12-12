@@ -5,19 +5,16 @@ export default function BackgroundAnimation() {
   const canvasRef = useRef(null);
   const animationId = useRef(null);
   const particlesArray = useRef([]);
-  const mouseRef = useRef({ x: 0, y: 0, radius: 100 });
-  const frameSkip = useRef(0); // For performance optimization
+  const frameSkip = useRef(0);
   
-  // Colors based on theme
-  const colors = {
-    primary: '#14b8a6',
-    secondary: '#0d9488',
-    accent: '#ec4899',
-    dark: '#0f172a',
-    light: '#f8fafc'
+  // Helper function to detect low-performance mobile devices
+  const isLowPerformanceMobile = () => {
+    const isMobile = window.innerWidth <= 768;
+    const deviceMemory = window.navigator.deviceMemory || 4;
+    return isMobile && deviceMemory <= 2;
   };
   
-  class Particle {
+  class WaterDroplet {
     constructor(context, width, height) {
       this.context = context;
       this.width = width;
@@ -27,98 +24,152 @@ export default function BackgroundAnimation() {
       this.x = Math.random() * this.width;
       this.y = Math.random() * this.height;
       
-      // Random size
-      this.size = Math.random() * 2 + 1;
+      // Start with small size, will grow
+      this.size = Math.random() * 3 + 1;
+      this.maxSize = Math.random() * 15 + 8;
+      this.growthRate = Math.random() * 0.08 + 0.02;
       
-      // Random speed
-      this.speedX = Math.random() * 1 - 0.5;
-      this.speedY = Math.random() * 1 - 0.5;
+      // Mostly stationary until it gets heavy
+      this.speedX = 0;
+      this.speedY = 0;
       
-      // Color based on position
-      this.color = this.getColor();
+      // Gravity kicks in when droplet is big enough
+      this.gravity = 0.01;
+      this.mass = this.size;
       
-      // Alpha for fading effect
-      this.alpha = Math.random() * 0.3 + 0.2;
+      // For merging detection
+      this.merged = false;
       
-      // For connection lines
-      this.connections = [];
-    }
-    
-    getColor() {
-      const gradientRatio = this.x / this.width;
-      if (gradientRatio < 0.33) {
-        return colors.primary;
-      } else if (gradientRatio < 0.66) {
-        return colors.secondary;
-      } else {
-        return colors.accent;
-      }
+      // Slight wobble effect
+      this.wobble = Math.random() * Math.PI * 2;
+      this.wobbleSpeed = Math.random() * 0.02 + 0.01;
     }
     
     update() {
-      // Move particle (slow down for low performance devices)
-      const movementScale = isLowPerformanceMobile() ? 0.7 : 1;
-      this.x += this.speedX * movementScale;
-      this.y += this.speedY * movementScale;
-
-      // Bounce off edges
-      if (this.x > this.width || this.x < 0) {
-        this.speedX = -this.speedX;
-      }
-      if (this.y > this.height || this.y < 0) {
-        this.speedY = -this.speedY;
+      if (this.merged) return;
+      
+      // Grow droplet over time
+      if (this.size < this.maxSize) {
+        this.size += this.growthRate;
+        this.mass = this.size;
       }
       
-      // Slight random movement variation
-      if (Math.random() > 0.9) {
-        this.speedX += (Math.random() * 0.2 - 0.1);
-        this.speedY += (Math.random() * 0.2 - 0.1);
+      // When droplet is big enough, it starts to slide down
+      if (this.size > 5) {
+        this.speedY += this.gravity * (this.mass / 10);
+        
+        // Add slight sideways drift
+        this.wobble += this.wobbleSpeed;
+        this.speedX = Math.sin(this.wobble) * 0.1;
       }
       
-      // Keep speed in bounds
-      this.speedX = Math.max(Math.min(this.speedX, 1.5), -1.5);
-      this.speedY = Math.max(Math.min(this.speedY, 1.5), -1.5);
+      // Apply movement
+      this.x += this.speedX;
+      this.y += this.speedY;
       
-      // Update color based on current position
-      this.color = this.getColor();
+      // Reset when droplet goes off screen
+      if (this.y > this.height + 20) {
+        this.y = -10;
+        this.x = Math.random() * this.width;
+        this.size = Math.random() * 3 + 1;
+        this.maxSize = Math.random() * 15 + 8;
+        this.speedY = 0;
+        this.speedX = 0;
+      }
+      
+      // Keep within horizontal bounds
+      if (this.x < 0) this.x = 0;
+      if (this.x > this.width) this.x = this.width;
     }
     
     draw() {
       const ctx = this.context;
       
-      // Draw particle
+      // Main droplet body with gradient for glass effect
+      const gradient = ctx.createRadialGradient(
+        this.x - this.size * 0.3,
+        this.y - this.size * 0.3,
+        0,
+        this.x,
+        this.y,
+        this.size
+      );
+      
+      // Water droplet colors - translucent with slight tint
+      gradient.addColorStop(0, 'rgba(255, 255, 255, 0.4)');
+      gradient.addColorStop(0.3, 'rgba(180, 230, 255, 0.25)');
+      gradient.addColorStop(0.7, 'rgba(100, 200, 255, 0.15)');
+      gradient.addColorStop(1, 'rgba(100, 180, 230, 0.1)');
+      
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.globalAlpha = this.alpha;
-      ctx.fill();
-      ctx.closePath();
-      
-      // Draw glow effect
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
-      const gradient = ctx.createRadialGradient(
-        this.x, this.y, this.size,
-        this.x, this.y, this.size * 3
-      );
-      gradient.addColorStop(0, this.color.replace(')', ', 0.3)'));
-      gradient.addColorStop(1, this.color.replace(')', ', 0)'));
       ctx.fillStyle = gradient;
       ctx.fill();
-      ctx.closePath();
       
-      // Reset alpha
-      ctx.globalAlpha = 1;
+      // Add highlight for 3D effect
+      const highlight = ctx.createRadialGradient(
+        this.x - this.size * 0.4,
+        this.y - this.size * 0.4,
+        0,
+        this.x - this.size * 0.4,
+        this.y - this.size * 0.4,
+        this.size * 0.5
+      );
+      highlight.addColorStop(0, 'rgba(255, 255, 255, 0.6)');
+      highlight.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      
+      ctx.beginPath();
+      ctx.arc(this.x - this.size * 0.3, this.y - this.size * 0.3, this.size * 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = highlight;
+      ctx.fill();
+      
+      // Outer glow/blur for soft edges
+      const blur = ctx.createRadialGradient(
+        this.x, this.y, this.size * 0.8,
+        this.x, this.y, this.size * 1.3
+      );
+      blur.addColorStop(0, 'rgba(200, 230, 255, 0.1)');
+      blur.addColorStop(1, 'rgba(200, 230, 255, 0)');
+      
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 1.2, 0, Math.PI * 2);
+      ctx.fillStyle = blur;
+      ctx.fill();
+      
+      ctx.closePath();
+    }
+    
+    // Check if this droplet can merge with another
+    canMergeWith(other) {
+      if (this.merged || other.merged) return false;
+      
+      const dx = this.x - other.x;
+      const dy = this.y - other.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      return distance < (this.size + other.size) * 0.7;
+    }
+    
+    // Merge with another droplet
+    mergeWith(other) {
+      // New position is weighted average
+      const totalMass = this.mass + other.mass;
+      this.x = (this.x * this.mass + other.x * other.mass) / totalMass;
+      this.y = (this.y * this.mass + other.y * other.mass) / totalMass;
+      
+      // Combine sizes (volume-based)
+      const newVolume = Math.PI * this.size * this.size + Math.PI * other.size * other.size;
+      this.size = Math.sqrt(newVolume / Math.PI);
+      this.maxSize = Math.max(this.maxSize, other.maxSize, this.size + 5);
+      this.mass = this.size;
+      
+      // Average speeds
+      this.speedY = (this.speedY * this.mass + other.speedY * other.mass) / totalMass;
+      
+      // Mark the other droplet as merged
+      other.merged = true;
     }
   }
-  
-  const handleMouseMove = (event) => {
-    if (!canvasRef.current) return;
-    
-    const rect = canvasRef.current.getBoundingClientRect();
-    mouseRef.current.x = event.clientX - rect.left;
-    mouseRef.current.y = event.clientY - rect.top;
-  };
   
   const handleResize = () => {
     if (!canvasRef.current) return;
@@ -175,7 +226,7 @@ export default function BackgroundAnimation() {
     particlesArray.current = [];
 
     for (let i = 0; i < particleCount; i++) {
-      particlesArray.current.push(new Particle(ctx, canvas.width, canvas.height));
+      particlesArray.current.push(new WaterDroplet(ctx, canvas.width, canvas.height));
     }
   };
   
@@ -185,101 +236,46 @@ export default function BackgroundAnimation() {
 
     const ctx = canvas.getContext('2d');
 
-    // Performance optimization: skip frames on low FPS
-    frameSkip.current += 1;
-    const skipRate = isLowPerformanceMobile() ? 2 : 1;
-
-    // Clear canvas with fade effect (adjust fade amount based on performance)
-    const fadeAmount = skipRate === 2 ? 0.1 : 0.05;
-    ctx.fillStyle = `rgba(15, 23, 42, ${fadeAmount})`;
+    // Clear canvas completely for water droplet effect
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.02)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Update and draw particles
-    particlesArray.current.forEach(particle => {
-      particle.update();
-      particle.draw();
-    });
-
-    // Draw connection lines between particles (less frequent on mobile)
-    if (frameSkip.current % skipRate === 0) {
-      drawConnections(ctx);
-      drawMouseConnections(ctx);
-    }
-
-    animationId.current = requestAnimationFrame(animate);
-  };
-  
-  const drawConnections = (ctx) => {
-    const particles = particlesArray.current;
+    // Check for merging droplets
+    const activeDroplets = particlesArray.current.filter(d => !d.merged);
     
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        // Only connect particles within 100px
-        if (distance < 100) {
-          const opacity = 1 - (distance / 100);
-          
-          // Use gradient color between the two particles
-          const gradient = ctx.createLinearGradient(
-            particles[i].x, particles[i].y,
-            particles[j].x, particles[j].y
-          );
-          gradient.addColorStop(0, particles[i].color.replace(')', ', ' + opacity * 0.3 + ')'));
-          gradient.addColorStop(1, particles[j].color.replace(')', ', ' + opacity * 0.3 + ')'));
-          
-          ctx.beginPath();
-          ctx.lineWidth = 1;
-          ctx.strokeStyle = gradient;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-          ctx.closePath();
+    for (let i = 0; i < activeDroplets.length; i++) {
+      for (let j = i + 1; j < activeDroplets.length; j++) {
+        if (activeDroplets[i].canMergeWith(activeDroplets[j])) {
+          activeDroplets[i].mergeWith(activeDroplets[j]);
         }
       }
     }
-  };
-  
-  const drawMouseConnections = (ctx) => {
-    const particles = particlesArray.current;
-    const mouse = mouseRef.current;
-    
-    particles.forEach(particle => {
-      const dx = particle.x - mouse.x;
-      const dy = particle.y - mouse.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      
-      if (distance < mouse.radius) {
-        const opacity = 1 - (distance / mouse.radius);
-        
-        // Create gradient from particle to mouse
-        const gradient = ctx.createLinearGradient(
-          particle.x, particle.y,
-          mouse.x, mouse.y
-        );
-        gradient.addColorStop(0, particle.color.replace(')', ', ' + opacity * 0.5 + ')'));
-        gradient.addColorStop(1, colors.accent.replace(')', ', ' + opacity * 0.2 + ')'));
-        
-        // Draw connection line
-        ctx.beginPath();
-        ctx.lineWidth = 1.5;
-        ctx.strokeStyle = gradient;
-        ctx.moveTo(particle.x, particle.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.stroke();
-        ctx.closePath();
-        
-        // Draw mouse point
-        ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = colors.accent.replace(')', ', ' + opacity * 0.5 + ')');
-        ctx.fill();
-        ctx.closePath();
+
+    // Update and draw droplets
+    particlesArray.current.forEach(droplet => {
+      if (!droplet.merged) {
+        droplet.update();
+        droplet.draw();
       }
     });
+
+    // Clean up merged droplets occasionally
+    if (frameSkip.current % 100 === 0) {
+      particlesArray.current = particlesArray.current.filter(d => !d.merged);
+      
+      // Add new droplets to replace merged ones
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      while (particlesArray.current.length < 60) {
+        particlesArray.current.push(new WaterDroplet(ctx, canvas.width, canvas.height));
+      }
+    }
+
+    frameSkip.current += 1;
+    animationId.current = requestAnimationFrame(animate);
   };
+  
+
   
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -297,12 +293,10 @@ export default function BackgroundAnimation() {
     
     // Add event listeners
     window.addEventListener('resize', handleResize);
-    canvas.addEventListener('mousemove', handleMouseMove);
     
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      canvas.removeEventListener('mousemove', handleMouseMove);
       
       if (animationId.current) {
         cancelAnimationFrame(animationId.current);
