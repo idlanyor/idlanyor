@@ -1,11 +1,6 @@
-[![An image of @roynaldi3301's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/roynaldi3301)](https://holopin.io/@roynaldi3301)
 
 [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=idlanyor&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/idlanyor)
 
-## 🏆 GitHub Profile Trophy
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
-    <img src="https://github-profile-trophy.vercel.app/?username=latesturl&theme=dracula&row=2&column=3&margin-w=8&margin-h=8&no-frame=true&no-bg=true" alt="GitHub Trophies" style="width: 100%; max-width: 400px;">
-</div>
 <h2 align="center">Hi 👋! My name is Roynaldi and I'm a junior developer.</h2>
 
 <div align="center">
@@ -29,10 +24,6 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="30" alt="dart logo" />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="30" alt="c++ logo" />
-  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo" />
 </div>
 
@@ -46,16 +37,16 @@
 
 
 <div align="center">
-  <a href="https://github.com/idlanyor/teleexpress">
+  <a href="https://github.com/idlanyor/antidonasi-miniblast">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
   </a>
   <a href="https://github.com/idlanyor/kanata-reborn">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=kanata-reborn&theme=dracula" alt="Kanata V3" />
   </a>
-  <a href="https://github.com/idlanyor/backend-2">
+  <a href="https://github.com/idlanyor/qris-api">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2&theme=dracula" alt="Backend PPDB" />
   </a>
-  <a href="https://github.com/idlanyor/diciptakan-karena-gabut">
+  <a href="https://github.com/idlanyor/base-kanata">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=diciptakan-karena-gabut&theme=dracula" alt="Frontend-ppdb" />
   </a>
 </div>
