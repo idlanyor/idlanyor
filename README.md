@@ -38,16 +38,16 @@
 
 <div align="center">
   <a href="https://github.com/idlanyor/antidonasi-miniblast">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=teleexpress&show_owner=true&theme=dracula" alt="Telegram" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=antidonasi-miniblast&show_owner=true&theme=dracula" alt="Mini Blaster" />
   </a>
   <a href="https://github.com/idlanyor/kanata-reborn">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=kanata-reborn&theme=dracula" alt="Kanata V3" />
   </a>
   <a href="https://github.com/idlanyor/qris-api">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=backend-2&theme=dracula" alt="Backend PPDB" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=qris-api&theme=dracula" alt="QRIS API" />
   </a>
   <a href="https://github.com/idlanyor/base-kanata">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=diciptakan-karena-gabut&theme=dracula" alt="Frontend-ppdb" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=base-kanata&theme=dracula" alt="Base Kanata" />
   </a>
 </div>
 
@@ -80,10 +80,6 @@
     <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="fb logo"  />
   </a>
 </div>
-
-
-[![Idlanyor's GitHub stats](https://github-readme-stats.vercel.app/api?username=idlanyor)](https://idlanyor.web.id)
-
 
 <h1 align="center">Visitor</h1>
 
