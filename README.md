@@ -57,10 +57,6 @@
 
 ###
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=idlanyor&theme=onedark&border_radius=5&locale=id&date_format=j%20M%5B%20Y%5D" height="300" alt="streak graph"  />
-</div>
-
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=idlanyor&theme=2077" alt="Profile Details" style="width: 100%; max-width: 500px;">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=idlanyor&theme=2077" alt="Repos per Language" style="width: 48%; max-width: 300px;">
@@ -72,20 +68,16 @@
 ###
 
 <div align="center">
-  <a href="YOUR_INSTAGRAM_LINK">
+  <a href="https://www.instagram.com/kang.potokopi">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
   </a>
-  <a href="YOUR_TWITCH_LINK">
-    <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=0000FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch logo"  />
-  </a>
-  <a href="YOUR_DISCORD_LINK">
-    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
-  </a>
-  <a href="YOUR_EMAIL_LINK">
+  <a href="support@antidonasi.web.id">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
   </a>
-  <a href="YOUR_LINKEDIN_LINK">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  <a href="https://wa.me/62895395590009">
+    <img src="https://img.shields.io/static/v1?message=Whatsapp&logo=whatsapp&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="wa logo"  />
+  <a href="https://www.facebook.com/kang.potokopi">
+    <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="fb logo"  />
   </a>
 </div>
 
