@@ -99,7 +99,7 @@
 </div>
 
 
-
+[![Idlanyor's GitHub stats](https://github-readme-stats.vercel.app/api?username=idlanyor)](https://idlanyor.web.id)
 
 
 <h1 align="center">Visitor</h1>
