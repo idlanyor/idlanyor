@@ -107,7 +107,9 @@
 ###
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/idlanyor/count.svg?"  />
+    <p>
+        <img align="center" alt="count" src="https://count.getloli.com/@idlanyor?name=idlanyor&theme=original-new">
+    </p>
 </div>
 
 ###
