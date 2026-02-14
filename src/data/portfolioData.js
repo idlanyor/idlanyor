@@ -1,4 +1,35 @@
 // Data untuk projects
+export const featuredProjects = [
+    {
+        title: 'KanataAPI',
+        description: 'Modular Monolith powered by Elixir & Phoenix. Unified Intelligence API for media scraping, AI image generation, and religious tools.',
+        image: 'https://api.kanata.web.id/images/logo.svg',
+        link: 'https://api.kanata.web.id/',
+        tech: ['Elixir', 'Phoenix', 'PostgreSQL']
+    },
+    {
+        title: 'KANATA V3',
+        description: 'Nonton Anime Sub Indo HD Gratis. Platform streaming anime dengan antarmuka modern dan koleksi lengkap.',
+        image: 'https://v3.kanata.web.id/icon.svg',
+        link: 'https://v3.kanata.web.id/',
+        tech: ['React', 'Vite', 'Cloudflare']
+    },
+    {
+        title: 'KanataAnime',
+        description: 'Streaming anime subtitle Indonesia kualitas HD 720p tanpa iklan. Update setiap hari untuk anime ongoing dan complete.',
+        image: 'https://anime.antidonasi.web.id/apple-touch-icon.png',
+        link: 'https://anime.antidonasi.web.id/',
+        tech: ['React', 'Tailwind CSS', 'HD Streaming']
+    },
+    {
+        title: 'KanataDownloader',
+        description: 'Universal Media Downloader. Download video, gambar, dan audio dari TikTok, X, Pinterest, Instagram, dan YouTube.',
+        image: 'https://downloader.kanata.web.id/kanata.png',
+        link: 'https://downloader.kanata.web.id/',
+        tech: ['JavaScript', 'Media API', 'SEO Optimized']
+    }
+];
+
 export const projectsData = [
     {
         icon: 'fab fa-js',

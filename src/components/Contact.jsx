@@ -1,178 +1,57 @@
 const Contact = () => {
-    // Social media links configuration
-    const socialLinks = [
-        {
-            icon: 'fab fa-github',
-            name: 'GitHub',
-            link: 'https://github.com/idlanyor',
-            color: 'hover:text-gray-400',
-            ariaLabel: 'Visit my GitHub profile'
-        },
-        {
-            icon: 'fas fa-globe',
-            name: 'Website',
-            link: 'https://antidonasi.web.id',
-            color: 'hover:text-blue-400',
-            ariaLabel: 'Visit my personal website'
-        },
-        {
-            icon: 'fab fa-instagram',
-            name: 'Instagram',
-            link: 'https://instagram.com/kang.potokopi',
-            color: 'hover:text-pink-500',
-            ariaLabel: 'Follow me on Instagram'
-        },
-        {
-            icon: 'fab fa-facebook',
-            name: 'Facebook',
-            link: 'https://facebook.com/kang.potokopi',
-            color: 'hover:text-indigo-500',
-            ariaLabel: 'Chat with me on Facebook'
-        },
-    ];
+  const socialLinks = [
+    { name: 'Github', link: 'https://github.com/idlanyor', icon: 'fab fa-github' },
+    { name: 'Website', link: 'https://antidonasi.web.id', icon: 'fas fa-globe' },
+    { name: 'Instagram', link: 'https://instagram.com/kang.potokopi', icon: 'fab fa-instagram' },
+    { name: 'Twitter', link: '#', icon: 'fab fa-twitter' },
+  ];
 
-    // Email configuration
-    const email = 'support@antidonasi.web.id';
+  return (
+    <div className="py-20 space-y-12">
+      <div className="text-center space-y-3">
+        <div className="text-blue-600 dark:text-blue-500 text-[10px] font-bold uppercase tracking-[0.2em]">Connect</div>
+        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
+          Let's Build Something <br />
+          <span className="text-blue-600 dark:text-blue-500">Amazing Together.</span>
+        </h2>
+      </div>
 
-    return (
-        <section
-            id="contact"
-            className="contact section-padding"
-            aria-labelledby="contact-heading"
-        >
-            <div className="container">
-                {/* Section Header */}
-                <div
-                    className="section-header text-center mb-12"
-                    data-aos="fade-up"
-                >
-                    <h2
-                        id="contact-heading"
-                        className="section-title text-3xl font-bold mb-4"
-                    >
-                        Get In Touch
-                    </h2>
-                    <p className="section-subtitle text-gray-400">
-                        Let&apos;s work together!
-                    </p>
-                </div>
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <div className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 backdrop-blur-sm flex flex-col justify-center space-y-6">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Have a project in mind?</h3>
+          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+          </p>
+          <div className="pt-2">
+            <a 
+              href="mailto:support@antidonasi.web.id"
+              className="text-xl font-black text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-500 transition-colors flex items-center gap-3 group"
+            >
+              hi@idlanyor.dev
+              <i className="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform text-sm"></i>
+            </a>
+          </div>
+        </div>
 
-                {/* Contact Content */}
-                <div className="contact-content grid md:grid-cols-2 gap-12 items-center">
-                    {/* Contact Info */}
-                    <div
-                        className="contact-info space-y-6"
-                        data-aos="fade-right"
-                    >
-                        <h3 className="text-2xl font-semibold mb-4">
-                            Let&apos;s Connect and Create Something Amazing Together!
-                        </h3>
-
-                        {/* Social Links */}
-                        <div className="social-links flex flex-wrap gap-4 mt-8">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={`${social.name}-${index}`}
-                                    href={social.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={social.ariaLabel}
-                                    className={`
-                                        social-link
-                                        flex items-center gap-2
-                                        px-4 py-2
-                                        rounded-full
-                                        bg-gray-800
-                                        text-gray-200
-                                        transition-all duration-300
-                                        hover:-translate-y-1
-                                        hover:shadow-lg
-                                        hover:bg-gray-700
-                                        ${social.color}
-                                    `}
-                                >
-                                    <i className={`${social.icon} text-xl`} aria-hidden="true"></i>
-                                    <span className="font-medium">{social.name}</span>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* CTA Box */}
-                    <div
-                        className="contact-cta"
-                        data-aos="fade-left"
-                    >
-                        <div className="
-                            cta-box
-                            bg-gray-800
-                            p-8
-                            rounded-2xl
-                            text-center
-                            shadow-lg
-                            hover:shadow-xl
-                            transition-shadow duration-300
-                            border border-gray-700
-                        ">
-                            <div className="
-                                icon-wrapper
-                                w-16 h-16
-                                bg-indigo-500/10
-                                rounded-full
-                                flex items-center justify-center
-                                mx-auto mb-6
-                            ">
-                                <i
-                                    className="fas fa-envelope-open-text text-3xl text-indigo-500"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-
-                            <h3 className="text-2xl font-bold mb-4">
-                                Email Me
-                            </h3>
-
-                            <p className="text-gray-400 mb-8">
-                                Drop me an email and I&apos;ll get back to you as soon as possible
-                            </p>
-
-                            <a
-                                href={`mailto:${email}`}
-                                className="
-                                    btn btn-primary
-                                    inline-flex items-center justify-center gap-3
-                                    px-10 py-8
-                                    rounded-full
-                                    bg-gradient-to-r from-indigo-500 to-purple-600
-                                    hover:from-indigo-600 hover:to-purple-700
-                                    text-white font-semibold text-base
-                                    transition-all duration-300
-                                    hover:shadow-lg hover:shadow-indigo-500/50
-                                    hover:scale-105
-                                    no-underline
-                                "
-                                aria-label={`Send email to ${email}`}
-                            >
-                                <div className="flex align-items-center">
-                                    <i
-                                        className="fas fa-paper-plane"
-                                        aria-hidden="true"
-                                        style={{
-                                            color: 'white',
-                                            opacity: 1,
-                                            fontSize: '1.5rem',
-                                            marginRight: '1rem',
-                                        }}
-                                    ></i>
-                                    <span style={{ color: 'white' }}>Send Email</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+        <div className="grid grid-cols-2 gap-4">
+          {socialLinks.map((social) => (
+            <a 
+              key={social.name}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 rounded-2xl bg-white dark:bg-[#030712] border border-black/5 dark:border-white/5 flex flex-col items-center justify-center gap-3 hover:border-blue-500/50 transition-all group shadow-sm dark:shadow-none"
+            >
+              <i className={`${social.icon} text-xl text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors`}></i>
+              <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
+                {social.name}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Contact;

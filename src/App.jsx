@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import AOS from 'aos';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import FeaturedProjects from './components/FeaturedProjects';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -9,44 +9,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundAnimation from './components/BackgroundAnimation';
 
-// Deteksi apakah device mobile performa rendah (hp kentang)
-function isLowPerformanceMobile() {
-  if (typeof window === 'undefined') return false;
-
-  // Cek berdasarkan jumlah core, RAM, dan layanan worker
-  const userAgent = window.navigator.userAgent.toLowerCase();
-  const memory = window.navigator.deviceMemory || 0;
-  const hardwareConcurrency = window.navigator.hardwareConcurrency || 0;
-
-  // HP kentang biasanya memiliki RAM <= 2GB dan core <= 4
-  const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-  const isLowRam = memory <= 2;
-  const isLowCore = hardwareConcurrency <= 4;
-
-  // Juga cek jika device menggunakan baterai hemat daya
-  const isBatterySaver = window.navigator.connection?.saveData || false;
-
-  return isMobile && (isLowRam || isLowCore || isBatterySaver);
-}
-
 function App() {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Initialize AOS hanya jika bukan hp kentang
-    if (!isLowPerformanceMobile()) {
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        easing: 'ease-in-out',
-      });
-    } else {
-      // Tambah class untuk disable animations di CSS
-      document.body.classList.add('low-performance-mobile');
-    }
-
-    // Check for saved theme preference or default to 'dark'
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -60,18 +26,40 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-dark text-primary transition-colors duration-300 relative">
-      {/* Background Animation - Full page */}
-      <BackgroundAnimation />
-
-      {/* Content */}
-      <div className="relative z-10">
+    <div className="min-h-screen bg-white dark:bg-[#030712] text-slate-900 dark:text-slate-200 selection:bg-blue-500/30 transition-colors duration-300">
+      <BackgroundAnimation theme={theme} />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        
+        <main className="pt-20 space-y-32 pb-20">
+          <section id="home">
+            <Hero theme={theme} />
+          </section>
+
+          <section id="portfolio">
+            <FeaturedProjects />
+          </section>
+          
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+            <section id="about" className="lg:col-span-7">
+              <About />
+            </section>
+            
+            <section id="skills" className="lg:col-span-5">
+              <Skills />
+            </section>
+          </div>
+
+          <section id="projects">
+            <Projects />
+          </section>
+          
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
+        
         <Footer />
       </div>
     </div>

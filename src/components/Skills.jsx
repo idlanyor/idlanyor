@@ -2,94 +2,53 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages',
-      icon: 'fas fa-code',
-      color: 'from-blue-500 to-cyan-500',
       skills: [
-        { icon: 'fab fa-js', name: 'JavaScript', level: 90 },
-        { icon: 'fab fa-php', name: 'PHP', level: 85 },
-        { icon: 'fab fa-python', name: 'Python', level: 70 },
-        { icon: 'fab fa-java', name: 'Java', level: 30 },
-        { icon: 'fas fa-code', name: 'C++', level: 40 },
+        { name: 'JavaScript', icon: 'fab fa-js text-yellow-500' },
+        { name: 'PHP', icon: 'fab fa-php text-blue-500' },
+        { name: 'Python', icon: 'fab fa-python text-blue-400' },
+        { name: 'C++', icon: 'fas fa-code text-slate-400' }
       ],
     },
     {
       title: 'Frontend',
-      icon: 'fas fa-laptop-code',
-      color: 'from-purple-500 to-pink-500',
       skills: [
-        { icon: 'fab fa-react', name: 'React', level: 90 },
-        { icon: 'fab fa-html5', name: 'HTML5', level: 70 },
-        { icon: 'fab fa-css3-alt', name: 'CSS3', level: 80 },
-        { icon: 'fas fa-wind', name: 'Tailwind CSS', level: 70 },
-        { icon: 'fab fa-bootstrap', name: 'Bootstrap', level: 90 },
+        { name: 'React', icon: 'fab fa-react text-blue-400' },
+        { name: 'Tailwind', icon: 'fas fa-wind text-cyan-400' },
+        { name: 'Node.js', icon: 'fab fa-node-js text-green-500' }
       ],
     },
     {
-      title: 'Tools & Others',
-      icon: 'fas fa-tools',
-      color: 'from-orange-500 to-red-500',
+      title: 'Tools',
       skills: [
-        { icon: 'fab fa-git-alt', name: 'Git', level: 88 },
-        { icon: 'fab fa-github', name: 'GitHub', level: 90 },
-        { icon: 'fab fa-docker', name: 'Docker', level: 75 },
-        { icon: 'fas fa-database', name: 'Database', level: 80 },
-        { icon: 'fas fa-server', name: 'Cloud Services', level: 60 },
+        { name: 'Docker', icon: 'fab fa-docker text-blue-500' },
+        { name: 'Git', icon: 'fab fa-git-alt text-orange-500' },
+        { name: 'Linux', icon: 'fab fa-linux text-slate-500' }
       ],
     },
   ];
 
   return (
-    <section id="skills" className="skills">
-      <div className="container">
-        {/* Section Header */}
-        <div className="section-header" data-aos="fade-up">
-          <h2 className="section-title">Skills & Expertise</h2>
-          <p className="section-subtitle">Technologies I work with and my proficiency levels</p>
+    <div className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 backdrop-blur-sm h-full transition-colors">
+      <div className="space-y-8">
+        <div className="space-y-3">
+          <div className="text-blue-600 dark:text-blue-500 text-[10px] font-bold uppercase tracking-[0.2em]">Stack</div>
+          <h2 className="text-3xl font-black text-slate-900 dark:text-white">Abilities</h2>
         </div>
 
-        {/* Skills Grid - New Modern Design */}
-        <div className="skills-grid-modern">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="skill-category-card"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              {/* Category Header */}
-              <div className={`category-header bg-gradient-to-r ${category.color}`}>
-                <div className="category-icon-wrapper">
-                  <i className={category.icon}></i>
-                </div>
-                <h3 className="category-title">{category.title}</h3>
-              </div>
-
-              {/* Skills List with Progress Bars */}
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
+        <div className="grid grid-cols-1 gap-6">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="space-y-3">
+              <h3 className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] border-b border-black/5 dark:border-white/5 pb-1">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
                   <div 
-                    key={skillIndex} 
-                    className="skill-item-modern"
-                    data-aos="fade-right"
-                    data-aos-delay={index * 100 + skillIndex * 50}
+                    key={skill.name} 
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#030712] border border-black/5 dark:border-white/5 text-slate-700 dark:text-white text-xs font-bold hover:border-blue-500/50 transition-all cursor-default shadow-sm dark:shadow-none group"
                   >
-                    <div className="skill-info">
-                      <div className="skill-name-wrapper">
-                        <i className={skill.icon}></i>
-                        <span className="skill-name">{skill.name}</span>
-                      </div>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    
-                    {/* Progress Bar */}
-                    <div className="skill-progress-bar">
-                      <div 
-                        className={`skill-progress-fill bg-gradient-to-r ${category.color}`}
-                        style={{ width: `${skill.level}%` }}
-                      >
-                        <div className="progress-shine"></div>
-                      </div>
-                    </div>
+                    <i className={`${skill.icon} text-sm group-hover:scale-110 transition-transform`}></i>
+                    <span>{skill.name}</span>
                   </div>
                 ))}
               </div>
@@ -97,7 +56,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

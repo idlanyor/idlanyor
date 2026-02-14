@@ -1,113 +1,47 @@
 import { useGitHubData } from '../hooks/useGitHubData';
 
 const About = () => {
-    const { data } = useGitHubData();
+  const { data } = useGitHubData();
 
-    const infoCards = [
-        {
-            icon: 'fas fa-graduation-cap',
-            title: 'Education',
-            subtitle: 'Light Vehicle Engineering',
-            highlight: 'SMK Maarif Karangreja',
-        },
-        {
-            icon: 'fas fa-briefcase',
-            title: 'Work',
-            subtitle: 'Tukang Potokopi',
-            highlight: 'Wisesa Cell & Copier Karangreja',
-        },
-        {
-            icon: 'fas fa-map-marker-alt',
-            title: 'Location',
-            subtitle: data?.user?.location || 'Wisesa Karangreja',
-            highlight: 'Indonesia',
-        },
-        {
-            icon: 'fas fa-globe',
-            title: 'Website',
-            subtitle: 'My Personal Bio',
-            highlight: data?.user?.blog || 'antidonasi.web.id',
-            link: data?.user?.blog ? (data.user.blog.startsWith('http') ? data.user.blog : `https://${data.user.blog}`) : 'https://antidonasi.web.id',
-        },
-    ];
+  const infoCards = [
+    { label: 'Education', value: 'SMK Maarif Karangreja', sub: 'Light Vehicle Engineering', icon: 'fas fa-graduation-cap' },
+    { label: 'Work', value: 'Wisesa Cell & Copier', sub: 'Tukang Potokopi', icon: 'fas fa-briefcase' },
+    { label: 'Location', value: data?.user?.location || 'Indonesia', sub: 'Remote / On-site', icon: 'fas fa-map-marker-alt' },
+    { label: 'Website', value: 'antidonasi.web.id', sub: 'Visit Portfolio', icon: 'fas fa-globe' },
+  ];
 
-    const badges = [
-        { icon: 'fas fa-trophy', text: 'YOLO' },
-        { icon: 'fas fa-fish', text: 'Pull Shark x2' },
-        { icon: 'fas fa-star', text: 'Starstruck' },
-        { icon: 'fas fa-bolt', text: 'Quickdraw' },
-        { icon: 'fas fa-laptop-code', text: 'Developer Program Member' },
-    ];
+  return (
+    <div className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 backdrop-blur-sm transition-colors">
+      <div className="space-y-8">
+        <div className="space-y-3">
+          <div className="text-blue-600 dark:text-blue-500 text-[10px] font-bold uppercase tracking-[0.2em]">Biography</div>
+          <h2 className="text-3xl font-black text-slate-900 dark:text-white">
+            Decoding My Journey
+          </h2>
+          <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+            I'm a developer who started from the world of copier machines. 
+            I believe coding is the perfect blend of machine logic and visual aesthetics.
+          </p>
+        </div>
 
-    return (
-        <section id="about" className="about">
-            <div className="container">
-                {/* Section Header */}
-                <div className="section-header" data-aos="fade-up">
-                    <h2 className="section-title">About Me</h2>
-                    <p className="section-subtitle">Get to know me better</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {infoCards.map((card) => (
+            <div key={card.label} className="p-4 rounded-xl bg-white dark:bg-[#030712] border border-black/5 dark:border-white/5 hover:border-blue-500/50 transition-all group">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-500">
+                  <i className={`${card.icon} text-sm`}></i>
                 </div>
-
-                <div className="about-content">
-                    {/* Info Cards */}
-                    <div className="about-info">
-                        {infoCards.map((card, index) => (
-                            <div
-                                key={index}
-                                className="info-card"
-                                data-aos="fade-up"
-                                data-aos-delay={index * 100}
-                            >
-                                <i className={card.icon}></i>
-                                <h3>{card.title}</h3>
-                                {card.subtitle && <p>{card.subtitle}</p>}
-                                {card.link ? (
-                                    <p>
-                                        <a
-                                            href={card.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="highlight"
-                                        >
-                                            {card.highlight}
-                                        </a>
-                                    </p>
-                                ) : (
-                                    <p className="highlight">{card.highlight}</p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Description */}
-                    <div className="about-description" data-aos="fade-left">
-                        <p>
-                            {data?.user?.bio ? (
-                                data.user.bio
-                            ) : (
-                                "Saya adalah seorang Mandor AI yang passionate dalam mengembangkan aplikasi web dan mobile. Dengan pengalaman sebagai freelancer dan graphic designer, saya menggabungkan kreativitas desain dengan kemampuan teknis programming untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga estetis."
-                            )}
-                        </p>
-                        <p>
-                            Saat ini saya aktif mengembangkan berbagai proyek open source dan terus belajar teknologi-teknologi baru untuk meningkatkan skill saya. Saya percaya bahwa coding adalah seperti bermain game - penuh tantangan, menyenangkan, dan selalu ada hal baru untuk dipelajari.
-                        </p>
-
-                        {/* Achievements */}
-                        <div className="achievements">
-                            <h3>GitHub Achievements</h3>
-                            <div className="achievement-badges">
-                                {badges.map((badge, index) => (
-                                    <span key={index} className="badge">
-                                        <i className={badge.icon}></i> {badge.text}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <div className="text-[9px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider leading-none mb-1">{card.label}</div>
+                  <div className="text-xs text-slate-900 dark:text-white font-bold">{card.value}</div>
                 </div>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default About;

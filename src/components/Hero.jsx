@@ -1,151 +1,64 @@
-import { useState, useEffect } from 'react';
 import { useGitHubData } from '../hooks/useGitHubData';
-import SkeletonCard from './skeletons/SkeletonCard';
 
-const Hero = () => {
+const Hero = ({ theme }) => {
   const { data, loading } = useGitHubData();
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  // Track mouse position for background animation
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      // Calculate mouse position relative to viewport center
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      setMousePosition({ x, y });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  // Default/Fallback data
-  const stats = [
-    {
-      icon: 'fas fa-code',
-      value: loading ? '...' : data?.user?.public_repos || '185+',
-      label: 'Repositories'
-    },
-    {
-      icon: 'fas fa-star',
-      value: loading ? '...' : data?.user?.total_stars || '52',
-      label: 'Stars'
-    },
-    {
-      icon: 'fas fa-users',
-      value: loading ? '...' : data?.user?.followers || '33',
-      label: 'Followers'
-    },
-  ];
+  const isDark = theme === 'dark';
 
   return (
-    <section id="home" className="hero">
-      {/* Animated Background Particles */}
-      <div
-        className="hero-particles"
-        style={{
-          transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`,
-          transition: 'transform 0.3s ease-out'
-        }}
-      ></div>
-
-      {/* Gradient Orbs that follow mouse */}
-      <div className="hero-orbs">
-        <div
-          className="orb orb-1"
-          style={{
-            transform: `translate(${mousePosition.x * 30}px, ${mousePosition.y * 30}px)`,
-            transition: 'transform 0.5s ease-out'
-          }}
-        ></div>
-        <div
-          className="orb orb-2"
-          style={{
-            transform: `translate(${mousePosition.x * -25}px, ${mousePosition.y * -25}px)`,
-            transition: 'transform 0.6s ease-out'
-          }}
-        ></div>
-        <div
-          className="orb orb-3"
-          style={{
-            transform: `translate(${mousePosition.x * 15}px, ${mousePosition.y * -20}px)`,
-            transition: 'transform 0.4s ease-out'
-          }}
-        ></div>
+    <div className="relative min-h-[80vh] flex items-center pt-20">
+      {/* Background Image / Image on the right side */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-[#030712] dark:via-[#030712]/80 dark:to-transparent z-10 lg:block hidden transition-colors duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white dark:from-[#030712] dark:via-transparent dark:to-[#030712] z-10 lg:hidden block transition-colors duration-300"></div>
+        <img
+          src={data?.user?.avatar_url || "https://avatars.githubusercontent.com/u/52753423"}
+          alt="Profile"
+          className="w-full h-full object-cover opacity-30 lg:opacity-60 grayscale hover:grayscale-0 transition-all duration-1000"
+        />
       </div>
 
-      <div className="container">
-        <div className="hero-content">
-          {/* Hero Text */}
-          <div className="hero-text" data-aos="fade-right">
-            <h1 className="hero-title">
-              Hi, I'm <span className="gradient-text">{data?.user?.name || 'Roynaldi'}</span>
-            </h1>
-            <h2 className="hero-subtitle">
-              Mandor AI & Tukang Fotokopi
-            </h2>
-            <p className="hero-description">
-              {data?.user?.bio || '"Let\'s Play the game like coding" - Seorang tukang fotokopi yang terobsesi dengan koding dan grafis. berdedikasi untuk meningkatkan kemampuan programming dan desain grafis melalui coba coba.'}
-            </p>
+      <div className="max-w-4xl space-y-8 px-4 lg:px-0 relative z-20">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wider uppercase">
+          <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+          Junior Developer & Freelancer
+        </div>
 
-            {/* Stats */}
-            <div className="hero-stats">
-              {loading ? (
-                <>
-                  <SkeletonCard type="stat" />
-                  <SkeletonCard type="stat" />
-                  <SkeletonCard type="stat" />
-                </>
-              ) : (
-                stats.map((stat, index) => (
-                  <div key={index} className="stat-item" data-aos="fade-up" data-aos-delay={index * 100}>
-                    <i className={stat.icon}></i>
-                    <div>
-                      <h3>{stat.value}</h3>
-                      <p>{stat.label}</p>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
+        <div className="space-y-4 text-center lg:text-left">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 dark:text-white leading-none">
+            ROYNALDI<span className="text-blue-600">.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Freelancer <span className="text-slate-300 dark:text-slate-700 mx-2">/</span> Tukang Fotokopi
+            <span className="block text-base font-normal mt-4 text-slate-500">
+              I'm always increasing my skills with <code className="text-blue-600 dark:text-blue-400 font-mono">ngoding</code>.
+              Building functional and efficient digital experiences.
+            </span>
+          </p>
+        </div>
 
-            {/* Buttons */}
-            <div className="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-              <a href="#contact" className="btn btn-primary">
-                <i className="fas fa-envelope"></i> Get In Touch
-              </a>
-              <a
-                href={data?.user?.html_url || "https://github.com/idlanyor"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                <i className="fab fa-github"></i> View GitHub
-              </a>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+          <a href="#projects" className="btn-primary">
+            View Projects
+          </a>
+          <a href="#contact" className="btn-secondary">
+            Get in Touch
+          </a>
+        </div>
 
-          {/* Hero Image */}
-          <div className="hero-image" data-aos="fade-left">
-            <div className="image-wrapper">
-              <img
-                src={data?.user?.avatar_url || "https://avatars.githubusercontent.com/u/52753423"}
-                alt="Roynaldi"
-              />
-              <div className="image-bg"></div>
+        <div className="flex justify-center lg:justify-start gap-8 pt-12">
+          {[
+            { label: 'Repos', value: data?.user?.public_repos || '180+' },
+            { label: 'Stars', value: data?.user?.total_stars || '50+' },
+            { label: 'Followers', value: data?.user?.followers || '30+' },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">{loading ? '...' : stat.value}</div>
+              <div className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{stat.label}</div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
-        <i className="fas fa-chevron-down"></i>
-      </div>
-    </section>
+    </div>
   );
 };
 
