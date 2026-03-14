@@ -38,7 +38,7 @@
 
 <div align="center">
   <a href="https://github.com/idlanyor/antidonasi-miniblast">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=antidonasi-miniblast&show_owner=true&theme=dracula" alt="Mini Blaster" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=antidonasi-miniblas&show_owner=true&theme=dracula" alt="Mini Blaster" />
   </a>
   <a href="https://github.com/idlanyor/kanata-reborn">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wa-webhook&theme=dracula" alt="Whatsapp Webhook" />
