@@ -41,7 +41,7 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=antidonasi-miniblast&show_owner=true&theme=dracula" alt="Mini Blaster" />
   </a>
   <a href="https://github.com/idlanyor/kanata-reborn">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=kanata-reborn&theme=dracula" alt="Kanata V3" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wa-webhook&theme=dracula" alt="Whatsapp Webhook" />
   </a>
   <a href="https://github.com/idlanyor/qris-api">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=qris-api&theme=dracula" alt="QRIS API" />
