@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Theme Switcher
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;

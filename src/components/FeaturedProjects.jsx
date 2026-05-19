@@ -18,9 +18,9 @@ const FeaturedProjects = () => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 transition-all hover:border-blue-500/50 shadow-sm dark:shadow-none"
+            className="group block relative clay-card-interactive overflow-hidden"
           >
-            <div className="aspect-[16/10] overflow-hidden bg-slate-200 dark:bg-slate-800/50 flex items-center justify-center p-6">
+            <div className="aspect-[16/10] overflow-hidden bg-slate-200/50 dark:bg-slate-800/20 flex items-center justify-center p-6 rounded-t-[1.5rem]">
               <img 
                 src={project.image} 
                 alt={project.title} 

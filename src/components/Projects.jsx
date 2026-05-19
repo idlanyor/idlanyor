@@ -17,7 +17,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {loading ? (
           [...Array(6)].map((_, i) => (
-            <div key={i} className="h-40 rounded-2xl bg-slate-100 dark:bg-white/5 border border-black/5 dark:border-white/5 animate-pulse"></div>
+            <div key={i} className="h-40 clay-card animate-pulse"></div>
           ))
         ) : (
           projects.map((repo) => (
@@ -26,7 +26,7 @@ const Projects = () => {
               href={repo.html_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-6 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 hover:border-blue-500/50 transition-all shadow-sm dark:shadow-none flex flex-col justify-between"
+              className="group p-6 clay-card-interactive flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-start">

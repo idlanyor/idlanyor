@@ -1,20 +1,19 @@
 import { useGitHubData } from '../hooks/useGitHubData';
 
-const Hero = ({ theme }) => {
+const Hero = () => {
   const { data, loading } = useGitHubData();
-  const isDark = theme === 'dark';
 
   return (
     <div className="relative min-h-[80vh] flex items-center pt-20">
       {/* Background Image / Image on the right side */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-[#030712] dark:via-[#030712]/80 dark:to-transparent z-10 lg:block hidden transition-colors duration-300"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white dark:from-[#030712] dark:via-transparent dark:to-[#030712] z-10 lg:hidden block transition-colors duration-300"></div>
-        <img
-          src={data?.user?.avatar_url || "https://avatars.githubusercontent.com/u/52753423"}
-          alt="Profile"
-          className="w-full h-full object-cover opacity-30 lg:opacity-60 grayscale hover:grayscale-0 transition-all duration-1000"
-        />
+        <div className="relative w-64 h-64 lg:w-96 lg:h-96 mx-auto lg:mx-0 lg:ml-auto clay-panel animate-float overflow-hidden group">
+          <img
+            src={data?.user?.avatar_url || "https://avatars.githubusercontent.com/u/52753423"}
+            alt="Profile"
+            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+          />
+        </div>
       </div>
 
       <div className="max-w-4xl space-y-8 px-4 lg:px-0 relative z-20">
@@ -37,10 +36,10 @@ const Hero = ({ theme }) => {
         </div>
 
         <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-          <a href="#projects" className="btn-primary">
+          <a href="#projects" className="clay-btn-primary">
             View Projects
           </a>
-          <a href="#contact" className="btn-secondary">
+          <a href="#contact" className="clay-btn-secondary">
             Get in Touch
           </a>
         </div>

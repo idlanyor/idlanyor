@@ -8,24 +8,24 @@ export const featuredProjects = [
         tech: ['Elixir', 'Phoenix', 'PostgreSQL']
     },
     {
-        title: 'KANATA V3',
-        description: 'Nonton Anime Sub Indo HD Gratis. Platform streaming anime dengan antarmuka modern dan koleksi lengkap.',
-        image: 'https://v3.kanata.web.id/icon.svg',
-        link: 'https://v3.kanata.web.id/',
+        title: 'KANATANIME',
+        description: 'Nonton Anime Sub Indo HD Gratis. Platform streaming anime,Movie,Donghua serta baca Komik/Manga/Manhwa/Manhua dengan antarmuka modern dan koleksi lengkap.',
+        image: 'https://s3.ireng.uk/6d4b797d5b5c09f4fbc09ed0e270886b.jpeg',
+        link: 'https://kanatanime.net/',
         tech: ['React', 'Vite', 'Cloudflare']
     },
     {
-        title: 'KanataAnime',
-        description: 'Streaming anime subtitle Indonesia kualitas HD 720p tanpa iklan. Update setiap hari untuk anime ongoing dan complete.',
-        image: 'https://anime.antidonasi.web.id/apple-touch-icon.png',
-        link: 'https://anime.antidonasi.web.id/',
+        title: 'Ireng Cloud',
+        description: 'Layanan Hosting VPS, KVM, NAT LXC, dan Pterodactyl Panel yang andal oleh Antidonasi Creative. Performa tinggi, aman, dan infrastruktur terjangkau untuk tim yang ingin meluncur cepat',
+        image: 'https://ireng.uk/favicon.svg?v=3',
+        link: 'https://ireng.uk/',
         tech: ['React', 'Tailwind CSS', 'HD Streaming']
     },
     {
         title: 'KanataDownloader',
         description: 'Universal Media Downloader. Download video, gambar, dan audio dari TikTok, X, Pinterest, Instagram, dan YouTube.',
-        image: 'https://downloader.kanata.web.id/kanata.png',
-        link: 'https://downloader.kanata.web.id/',
+        image: 'https://dl.ireng.uk/kanata.png',
+        link: 'https://dl.ireng.uk/',
         tech: ['JavaScript', 'Media API', 'SEO Optimized']
     }
 ];

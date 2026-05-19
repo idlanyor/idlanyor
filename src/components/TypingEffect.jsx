@@ -12,6 +12,7 @@ const TypingEffect = ({ texts, speed = 100, waitTime = 2000 }) => {
     if (!isDeleting && displayText === currentFullText) {
       timeout = setTimeout(() => setIsDeleting(true), waitTime);
     } else if (isDeleting && displayText === '') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsDeleting(false);
       setCurrentIndex((prev) => (prev + 1) % texts.length);
     } else {

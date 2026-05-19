@@ -10,13 +10,16 @@ import Footer from './components/Footer';
 import BackgroundAnimation from './components/BackgroundAnimation';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'dark';
+    }
+    return 'dark';
+  });
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -26,7 +29,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#030712] text-slate-900 dark:text-slate-200 selection:bg-blue-500/30 transition-colors duration-300">
+    <div className="min-h-screen selection:bg-blue-500/30 transition-colors duration-400">
       <BackgroundAnimation theme={theme} />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">

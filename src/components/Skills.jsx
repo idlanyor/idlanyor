@@ -28,7 +28,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="p-8 rounded-3xl bg-slate-50 dark:bg-[#0f172a]/50 border border-black/5 dark:border-white/5 backdrop-blur-sm h-full transition-colors">
+    <div className="p-8 clay-panel h-full">
       <div className="space-y-8">
         <div className="space-y-3">
           <div className="text-blue-600 dark:text-blue-500 text-[10px] font-bold uppercase tracking-[0.2em]">Stack</div>
@@ -41,11 +41,11 @@ const Skills = () => {
               <h3 className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] border-b border-black/5 dark:border-white/5 pb-1">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <div 
                     key={skill.name} 
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#030712] border border-black/5 dark:border-white/5 text-slate-700 dark:text-white text-xs font-bold hover:border-blue-500/50 transition-all cursor-default shadow-sm dark:shadow-none group"
+                    className="flex items-center gap-2 px-4 py-2 clay-card-interactive group cursor-default"
                   >
                     <i className={`${skill.icon} text-sm group-hover:scale-110 transition-transform`}></i>
                     <span>{skill.name}</span>

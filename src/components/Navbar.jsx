@@ -36,7 +36,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             >
               <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
             </button>
-            <a href="#contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-colors">
+            <a href="#contact" className="clay-btn-primary !px-5 !py-2 !text-sm">
               Let's Talk
             </a>
           </div>
