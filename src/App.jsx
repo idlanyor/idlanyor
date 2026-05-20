@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import FeaturedProjects from './components/FeaturedProjects';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundAnimation from './components/BackgroundAnimation';
+import Home from './pages/Home';
+import BlogList from './pages/BlogList';
+import BlogDetail from './pages/BlogDetail';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -17,9 +15,16 @@ function App() {
     return 'dark';
   });
 
+  const location = useLocation();
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -35,33 +40,11 @@ function App() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         
-        <main className="pt-20 space-y-32 pb-20">
-          <section id="home">
-            <Hero theme={theme} />
-          </section>
-
-          <section id="portfolio">
-            <FeaturedProjects />
-          </section>
-          
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            <section id="about" className="lg:col-span-7">
-              <About />
-            </section>
-            
-            <section id="skills" className="lg:col-span-5">
-              <Skills />
-            </section>
-          </div>
-
-          <section id="projects">
-            <Projects />
-          </section>
-          
-          <section id="contact">
-            <Contact />
-          </section>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home theme={theme} />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+        </Routes>
         
         <Footer />
       </div>
