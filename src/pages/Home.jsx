@@ -12,6 +12,10 @@ const Home = ({ theme }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
 
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 4;
+
   // Fetch posts from API + Merge with local high-quality articles
   useEffect(() => {
     fetch(`${API_BASE_URL}/posts`)
@@ -38,6 +42,11 @@ const Home = ({ theme }) => {
       });
   }, []);
 
+  // Reset pagination to page 1 on category or search change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
   const formatDate = (dateStr) => {
     return new Date(dateStr).toLocaleDateString('id-ID', {
       month: 'short',
@@ -61,6 +70,12 @@ const Home = ({ theme }) => {
   // Featured Post is the first article (highest index or simply the first one in lists)
   const featuredPost = posts.find(p => p.category === 'Office' || p.category === 'Development') || posts[0];
   const otherPosts = filteredPosts.filter(p => p.slug !== featuredPost?.slug);
+
+  // Pagination computations
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = otherPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const totalPages = Math.ceil(otherPosts.length / postsPerPage);
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
@@ -210,48 +225,102 @@ const Home = ({ theme }) => {
               <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Coba cari dengan kata kunci lain atau pilih kategori lain.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {otherPosts.map((post) => (
-                <article key={post.slug || post._id || post.id} className="group clay-card-interactive bg-white/50 dark:bg-slate-900/40 border border-emerald-500/5 hover:border-emerald-500/20 overflow-hidden flex flex-col justify-between">
-                  <div>
-                    <div className="aspect-[4/3] overflow-hidden rounded-t-[1.5rem] border-b border-black/5 dark:border-white/5">
-                      <img 
-                        src={post.image} 
-                        alt={post.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6 space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest rounded-full">
-                          {post.category}
-                        </span>
-                        <span className="text-xs text-slate-400 font-bold">{formatDate(post.date)}</span>
+            <div className="space-y-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {currentPosts.map((post) => (
+                  <article key={post.slug || post._id || post.id} className="group clay-card-interactive bg-white/50 dark:bg-slate-900/40 border border-emerald-500/5 hover:border-emerald-500/20 overflow-hidden flex flex-col justify-between">
+                    <div>
+                      <div className="aspect-[4/3] overflow-hidden rounded-t-[1.5rem] border-b border-black/5 dark:border-white/5">
+                        <img 
+                          src={post.image} 
+                          alt={post.title} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
                       </div>
-                      
-                      <h3 className="text-xl font-black text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-emerald-500 transition-colors line-clamp-2">
-                        <Link to={`/blog/${post.slug || post._id || post.id}`}>
-                          {post.title}
-                        </Link>
-                      </h3>
-                      
-                      <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-3">
-                        {post.excerpt}
-                      </p>
+                      <div className="p-6 space-y-4">
+                        <div className="flex items-center justify-between">
+                          <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest rounded-full">
+                            {post.category}
+                          </span>
+                          <span className="text-xs text-slate-400 font-bold">{formatDate(post.date)}</span>
+                        </div>
+                        
+                        <h3 className="text-xl font-black text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-emerald-500 transition-colors line-clamp-2">
+                          <Link to={`/blog/${post.slug || post._id || post.id}`}>
+                            {post.title}
+                          </Link>
+                        </h3>
+                        
+                        <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="px-6 pb-6 pt-4 border-t border-black/5 dark:border-white/5 flex items-center justify-between">
-                    <span className="text-xs text-slate-400 font-bold">Oleh: {post.author || 'Roynaldi'}</span>
-                    <Link 
-                      to={`/blog/${post.slug || post._id || post.id}`}
-                      className="text-xs font-black text-emerald-500 dark:text-amber-400 hover:text-emerald-600 dark:hover:text-amber-300 flex items-center gap-1 group"
+                    <div className="px-6 pb-6 pt-4 border-t border-black/5 dark:border-white/5 flex items-center justify-between">
+                      <span className="text-xs text-slate-400 font-bold">Oleh: {post.author || 'Roynaldi'}</span>
+                      <Link 
+                        to={`/blog/${post.slug || post._id || post.id}`}
+                        className="text-xs font-black text-emerald-500 dark:text-amber-400 hover:text-emerald-600 dark:hover:text-amber-300 flex items-center gap-1 group"
+                      >
+                        Baca Artikel <i className="fas fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              {/* Premium Claymorphic Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-3 pt-6">
+                  <button
+                    onClick={() => {
+                      setCurrentPage(prev => Math.max(prev - 1, 1));
+                      window.scrollTo({ top: 400, behavior: 'smooth' });
+                    }}
+                    disabled={currentPage === 1}
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center border font-black text-xs transition-all duration-300 ${
+                      currentPage === 1
+                        ? 'bg-transparent text-slate-400 border-slate-200 dark:border-slate-800 cursor-not-allowed opacity-50'
+                        : 'bg-white dark:bg-slate-900 border-emerald-500/10 dark:border-white/5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 hover:border-emerald-500 dark:hover:text-amber-400 cursor-pointer shadow-sm hover:-translate-y-0.5 active:scale-95'
+                    }`}
+                  >
+                    <i className="fas fa-chevron-left"></i>
+                  </button>
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                    <button
+                      key={pageNum}
+                      onClick={() => {
+                        setCurrentPage(pageNum);
+                        window.scrollTo({ top: 400, behavior: 'smooth' });
+                      }}
+                      className={`w-10 h-10 rounded-xl font-black text-xs transition-all duration-300 cursor-pointer ${
+                        currentPage === pageNum
+                          ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20 border-emerald-500'
+                          : 'bg-white dark:bg-slate-900 border border-emerald-500/10 dark:border-white/5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 hover:border-emerald-500 dark:hover:text-amber-400 shadow-sm hover:-translate-y-0.5 active:scale-95'
+                      }`}
                     >
-                      Baca Artikel <i className="fas fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                    </Link>
-                  </div>
-                </article>
-              ))}
+                      {pageNum}
+                    </button>
+                  ))}
+
+                  <button
+                    onClick={() => {
+                      setCurrentPage(prev => Math.min(prev + 1, totalPages));
+                      window.scrollTo({ top: 400, behavior: 'smooth' });
+                    }}
+                    disabled={currentPage === totalPages}
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center border font-black text-xs transition-all duration-300 ${
+                      currentPage === totalPages
+                        ? 'bg-transparent text-slate-400 border-slate-200 dark:border-slate-800 cursor-not-allowed opacity-50'
+                        : 'bg-white dark:bg-slate-900 border-emerald-500/10 dark:border-white/5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 hover:border-emerald-500 dark:hover:text-amber-400 cursor-pointer shadow-sm hover:-translate-y-0.5 active:scale-95'
+                    }`}
+                  >
+                    <i className="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              )}
             </div>
           )}
 
