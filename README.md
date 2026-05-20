@@ -90,21 +90,52 @@ fun_fact: "In my free time I always increase my skill with ngoding 💻"
 ## 📌 Featured Projects
 
 <div align="center">
-  <a href="https://github.com/idlanyor/wa-webhook">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=wa-webhook&show_owner=true&theme=radical&border_color=7F3FBF&bg_color=0D1117" alt="WA Webhook" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/idlanyor/antidonasi-miniblast">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=antidonasi-miniblast&show_owner=true&theme=radical&border_color=7F3FBF&bg_color=0D1117" alt="Mini Blaster" />
-  </a>
-  <br/><br/>
-  <a href="https://github.com/idlanyor/qris-api">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=qris-api&show_owner=true&theme=radical&border_color=7F3FBF&bg_color=0D1117" alt="QRIS API" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/idlanyor/base-kanata">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=idlanyor&repo=base-kanata&show_owner=true&theme=radical&border_color=7F3FBF&bg_color=0D1117" alt="Base Kanata" />
-  </a>
+  <table width="100%">
+    <tr>
+      <td width="50%" align="center">
+        <a href="https://github.com/idlanyor/wa-webhook">
+          <img src="https://opengraph.githubassets.com/1/idlanyor/wa-webhook" alt="WA Webhook" width="100%" />
+        </a>
+        <br/>
+        <b>🚀 WA Webhook</b>
+        <br/>
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" />
+      </td>
+      <td width="50%" align="center">
+        <a href="https://github.com/idlanyor/antidonasi-miniblast">
+          <img src="https://opengraph.githubassets.com/1/idlanyor/antidonasi-miniblast" alt="Mini Blaster" width="100%" />
+        </a>
+        <br/>
+        <b>💥 Mini Blaster</b>
+        <br/>
+        <img src="https://img.shields.io/badge/Automation-FF9900?style=flat-square&logo=githubactions&logoColor=white" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="center">
+        <a href="https://github.com/idlanyor/qris-api">
+          <img src="https://opengraph.githubassets.com/1/idlanyor/qris-api" alt="QRIS API" width="100%" />
+        </a>
+        <br/>
+        <b>💳 QRIS API</b>
+        <br/>
+        <img src="https://img.shields.io/badge/API-005571?style=flat-square&logo=postman&logoColor=white" />
+        <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
+      </td>
+      <td width="50%" align="center">
+        <a href="https://github.com/idlanyor/base-kanata">
+          <img src="https://opengraph.githubassets.com/1/idlanyor/base-kanata" alt="Base Kanata" width="100%" />
+        </a>
+        <br/>
+        <b>🛠️ Base Kanata</b>
+        <br/>
+        <img src="https://img.shields.io/badge/Framework-000000?style=flat-square&logo=framework7&logoColor=white" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 <br/>
@@ -123,7 +154,7 @@ fun_fact: "In my free time I always increase my skill with ngoding 💻"
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=idlanyor&theme=radical&border=7F3FBF&background=0D1117&stroke=7F3FBF&ring=A960FF&fire=FF6B6B&currStreakLabel=A960FF" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com/?user=idlanyor&theme=radical&border=7F3FBF&background=0D1117" alt="GitHub Streak" />
 
 <br/><br/>
 
@@ -148,17 +179,11 @@ fun_fact: "In my free time I always increase my skill with ngoding 💻"
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🐍 Contribution Graph
+## 📈 Activity Graph
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/idlanyor/idlanyor/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/idlanyor/idlanyor/output/github-snake.svg" />
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/idlanyor/idlanyor/output/github-snake-dark.svg" width="100%" />
-  </picture>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=idlanyor&theme=radical&area=true&hide_border=false" width="100%" alt="Activity Graph" />
 </div>
-
-> 💡 **Note:** Snake animation requires a GitHub Action. See the setup instructions below!
 
 <br/>
 
@@ -203,35 +228,3 @@ fun_fact: "In my free time I always increase my skill with ngoding 💻"
 <!-- ANIMATED FOOTER -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" />
 
-<!--
-  🐍 SNAKE ANIMATION SETUP
-  
-  To enable the snake contribution animation, create a GitHub Action:
-  
-  1. Create file: .github/workflows/snake.yml
-  2. Add the following content:
-  
-  name: Generate Snake
-  on:
-    schedule:
-      - cron: "0 */12 * * *"
-    workflow_dispatch:
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: Platane/snk@v3
-          with:
-            github_user_name: idlanyor
-            outputs: |
-              dist/github-snake.svg
-              dist/github-snake-dark.svg?palette=github-dark
-          
-        - uses: crazy-max/ghaction-github-pages@v3
-          with:
-            target_branch: output
-            build_dir: dist
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
--->
