@@ -35,9 +35,9 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
       scrolled 
         ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-emerald-500/10 dark:border-amber-400/5 py-3 shadow-sm' 
-        : 'bg-transparent py-5'
+        : 'bg-transparent py-4 md:py-5'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
         
         {/* Logo idlanyor-web */}
         <Link to="/" className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter flex items-center gap-2 group">
@@ -107,8 +107,8 @@ const Navbar = ({ theme, toggleTheme }) => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl z-[90] md:hidden transition-all duration-500 ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
-        <div className="flex flex-col h-full pt-32 px-10 gap-8">
+      <div className={`fixed inset-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl z-[150] md:hidden transition-all duration-500 ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
+        <div className="flex flex-col h-full pt-28 px-8 gap-6 overflow-y-auto">
           {navItems.map((item, index) => (
             <div 
               key={item.name}
@@ -117,7 +117,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             >
               <Link 
                 to={item.href}
-                className={`text-4xl font-black cursor-pointer ${
+                className={`text-3xl sm:text-4xl font-black cursor-pointer ${
                   isActive(item.href) 
                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-amber-400' 
                     : 'text-slate-900 dark:text-white'
@@ -128,10 +128,10 @@ const Navbar = ({ theme, toggleTheme }) => {
             </div>
           ))}
           
-          <div className={`mt-8 transition-all duration-500 delay-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`mt-6 transition-all duration-500 delay-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <Link 
               to="/contact" 
-              className="clay-btn-primary !bg-emerald-500 hover:!bg-emerald-600 w-full py-4 text-lg border-none shadow-none text-center block"
+              className="clay-btn-primary !bg-emerald-500 hover:!bg-emerald-600 w-full py-3 sm:py-4 text-base sm:text-lg border-none shadow-none text-center block"
             >
               Hubungi Kami
             </Link>

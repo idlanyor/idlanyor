@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Disclaimer = () => {
   return (
-    <div className="pt-32 pb-20 max-w-4xl mx-auto px-4">
+    <div className="pt-24 sm:pt-28 md:pt-32 pb-20 max-w-4xl mx-auto px-0">
       <Link 
         to="/" 
-        className="inline-flex items-center gap-2 text-slate-500 hover:text-emerald-500 transition-colors mb-8 font-bold text-sm"
+        className="inline-flex items-center gap-2 text-slate-500 hover:text-emerald-500 transition-colors mb-6 sm:mb-8 font-bold text-sm"
       >
         <i className="fas fa-arrow-left"></i> Kembali ke Beranda
       </Link>
@@ -24,7 +24,7 @@ const Disclaimer = () => {
             <span className="text-xs text-slate-400">Terakhir Diperbarui: 20 Mei 2026</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight mb-8">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight mb-6 sm:mb-8">
             Penafian <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-emerald-500">(Disclaimer)</span>
           </h1>
 

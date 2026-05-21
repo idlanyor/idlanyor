@@ -7,21 +7,21 @@ const AboutUs = () => {
   const { data, loading } = useGitHubData();
 
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-24 sm:pt-28 md:pt-32 pb-20">
       {/* Header Section */}
-      <div className="text-center mb-16 max-w-3xl mx-auto px-4">
+      <div className="text-center mb-10 sm:mb-16 max-w-3xl mx-auto px-4">
         <span className="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-black uppercase tracking-widest rounded-full">
           Tentang Kami
         </span>
-        <h1 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter mt-4 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter mt-4 mb-4 sm:mb-6 leading-tight">
           Di Balik Portal <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-amber-400">idlanyor-web</span>
         </h1>
-        <p className="text-slate-500 dark:text-slate-400 text-lg">
+        <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg">
           Kami berkomitmen membagikan tutorial teknologi berkualitas tinggi, dari dasar pemrograman hingga panduan produktivitas kerja harian.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-7xl mx-auto px-0">
         {/* Left Column: Author Bio & Details */}
         <div className="lg:col-span-8 space-y-12">
           {/* Main Biography Card */}

@@ -436,3 +436,72 @@ body {
 [data-theme="dark"] .prose hr, [data-theme="dark"] .blog-content hr {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+/* Prevent horizontal scroll globally */
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Better touch targets on mobile */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    min-height: 36px;
+    touch-action: manipulation;
+  }
+
+  /* Improve readability on small screens */
+  .prose p, .blog-content p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  /* Better code blocks on mobile */
+  .prose pre, .blog-content pre {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  /* Improve clay-card border-radius on mobile */
+  .clay-card, .clay-card-interactive {
+    border-radius: 1rem;
+  }
+
+  .clay-panel {
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  /* Prevent images from overflowing */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Fine-tune for very small screens (< 380px) */
+@media (max-width: 380px) {
+  .clay-panel {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .clay-btn-primary, .clay-btn-secondary {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Safe area insets for modern mobile browsers (notch, home bar) */
+@supports (padding: env(safe-area-inset-bottom)) {
+  footer {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+
+  nav {
+    padding-top: env(safe-area-inset-top);
+  }
+}

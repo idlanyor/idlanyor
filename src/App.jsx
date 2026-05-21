@@ -39,10 +39,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen selection:bg-emerald-500/30 transition-colors duration-400">
+    <div className="min-h-screen selection:bg-emerald-500/30 transition-colors duration-400 overflow-x-hidden">
       <BackgroundAnimation theme={theme} />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         
         <Routes>

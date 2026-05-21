@@ -21,7 +21,7 @@ const Footer = () => {
               </div>
               idlanyor<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-amber-400">-web</span>
             </Link>
-            <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-500 dark:from-emerald-400 dark:to-amber-300 italic tracking-tight">
+            <p className="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-500 dark:from-emerald-400 dark:to-amber-300 italic tracking-tight">
               "Learn anything, Share everything"
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Copyright Area */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 text-xs text-slate-500 font-bold">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-8 sm:pt-12 text-xs text-slate-500 font-bold">
           <div>
             © {new Date().getFullYear()} <span className="text-slate-800 dark:text-slate-300">idlanyor-web</span>. Semua Hak Cipta Dilindungi.
           </div>

@@ -54,16 +54,16 @@ const BlogList = () => {
   });
 
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-24 sm:pt-28 md:pt-32 pb-20">
       {/* Header Banner */}
-      <div className="text-center mb-16 max-w-2xl mx-auto px-4">
+      <div className="text-center mb-10 sm:mb-16 max-w-2xl mx-auto px-4">
         <span className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 to-amber-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-black uppercase tracking-widest rounded-full inline-block mb-4">
           Arsip Pembelajaran
         </span>
-        <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter mb-6 leading-none">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter mb-4 sm:mb-6 leading-none">
           Indeks <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-amber-400">Artikel</span>
         </h1>
-        <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+        <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
           Temukan ratusan tutorial praktis seputar office, coding, desain vektor CorelDRAW, hingga ulasan teknologi terkini.
         </p>
       </div>
@@ -72,16 +72,16 @@ const BlogList = () => {
       <AdPlaceholder label="LEADERBOARD BANNER AD" className="!my-6" />
 
       {/* Search and Filters */}
-      <div className="mb-12 max-w-4xl mx-auto px-4 space-y-6">
+      <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-4 space-y-4 sm:space-y-6">
         <div className="relative group">
           <input 
             type="text" 
             placeholder="Cari artikel berdasarkan judul, kategori, atau bahasan..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full px-6 py-4 bg-white dark:bg-slate-900 border border-emerald-500/10 dark:border-white/5 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all pr-12 shadow-lg shadow-black/5 dark:text-white"
+            className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white dark:bg-slate-900 border border-emerald-500/10 dark:border-white/5 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all pr-12 shadow-lg shadow-black/5 dark:text-white text-sm sm:text-base"
           />
-          <i className="fas fa-search absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-emerald-500 transition-colors"></i>
+          <i className="fas fa-search absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-emerald-500 transition-colors"></i>
         </div>
 
         {/* Category horizontal filters */}
@@ -90,7 +90,7 @@ const BlogList = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer ${
                 selectedCategory === cat 
                   ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20' 
                   : 'bg-white dark:bg-slate-900 border border-black/5 dark:border-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -116,7 +116,7 @@ const BlogList = () => {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto px-0">
           {filteredPosts.map((post) => (
             <article key={post.slug || post._id || post.id} className="group clay-card-interactive bg-white/50 dark:bg-slate-900/40 border border-emerald-500/5 hover:border-emerald-500/20 overflow-hidden flex flex-col justify-between">
               <div>

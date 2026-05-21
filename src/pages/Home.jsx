@@ -86,24 +86,24 @@ const Home = ({ theme }) => {
   };
 
   return (
-    <main className="pt-32 pb-20 space-y-16">
+    <main className="pt-24 sm:pt-28 md:pt-32 pb-20 space-y-12 sm:space-y-16">
       
       {/* 1. Blog Hero Header branding idlanyor-web & tagline */}
-      <section className="relative min-h-[40vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden py-10 rounded-[3rem] bg-gradient-to-br from-emerald-500/5 via-transparent to-amber-500/5 border border-emerald-500/10 dark:border-amber-400/5">
+      <section className="relative min-h-[35vh] sm:min-h-[40vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden py-8 sm:py-10 rounded-2xl sm:rounded-[3rem] bg-gradient-to-br from-emerald-500/5 via-transparent to-amber-500/5 border border-emerald-500/10 dark:border-amber-400/5">
         <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/5 rounded-full blur-3xl -z-10 animate-blob"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl -z-10 animate-blob animation-delay-2000"></div>
 
-        <div className="max-w-3xl space-y-6 relative z-10">
+        <div className="max-w-3xl space-y-4 sm:space-y-6 relative z-10">
           <span className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-500/10 to-amber-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-black tracking-widest uppercase rounded-full">
             <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse inline-block mr-2"></span>
             Portal Edukasi Teknologi Terlengkap
           </span>
 
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 dark:text-white leading-none">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-slate-900 dark:text-white leading-none">
             idlanyor<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-amber-400">-web</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-bold tracking-tight italic">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-bold tracking-tight italic">
             "Learn anything, Share everything"
           </p>
 
@@ -112,13 +112,13 @@ const Home = ({ theme }) => {
           </p>
 
           {/* Quick search input */}
-          <div className="max-w-md mx-auto pt-4 relative group">
+          <div className="max-w-md mx-auto pt-3 sm:pt-4 relative group">
             <input 
               type="text" 
               placeholder="Cari tutorial apa hari ini?..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-6 py-4 bg-white dark:bg-slate-900 border border-emerald-500/10 dark:border-white/5 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all pr-12 shadow-lg shadow-black/5 dark:text-white"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white dark:bg-slate-900 border border-emerald-500/10 dark:border-white/5 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all pr-12 shadow-lg shadow-black/5 dark:text-white text-sm sm:text-base"
             />
             <button className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 group-hover:text-emerald-500 transition-colors">
               <i className="fas fa-search"></i>
@@ -132,47 +132,47 @@ const Home = ({ theme }) => {
 
       {/* 2. Featured Post Section (Hanya tampil jika tidak sedang memfilter pencarian spesifik) */}
       {!searchQuery && selectedCategory === 'All' && featuredPost && (
-        <section className="space-y-6">
-          <h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
+        <section className="space-y-4 sm:space-y-6">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
             <span className="w-2.5 h-8 bg-gradient-to-b from-emerald-500 to-amber-400 rounded-full"></span>
             Artikel Pilihan Utama
           </h2>
-          <div className="group clay-panel border border-emerald-500/10 hover:border-emerald-500/20 bg-white/40 dark:bg-slate-900/40 p-6 md:p-8 rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center transition-all duration-300">
-            <div className="lg:col-span-7 aspect-[16/10] rounded-[2rem] overflow-hidden border border-black/5 dark:border-white/5 shadow-inner">
+          <div className="group clay-panel border border-emerald-500/10 hover:border-emerald-500/20 bg-white/40 dark:bg-slate-900/40 p-5 md:p-8 rounded-2xl sm:rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center transition-all duration-300">
+            <div className="lg:col-span-7 aspect-[16/10] rounded-xl sm:rounded-[2rem] overflow-hidden border border-black/5 dark:border-white/5 shadow-inner">
               <img 
                 src={featuredPost.image} 
                 alt={featuredPost.title} 
                 className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
               />
             </div>
-            <div className="lg:col-span-5 space-y-6">
-              <div className="flex items-center gap-4">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <span className="px-3 py-1 bg-gradient-to-r from-emerald-500 to-amber-400 text-white text-[10px] font-black uppercase tracking-widest rounded-full">
                   {featuredPost.category}
                 </span>
                 <span className="text-xs text-slate-400 font-bold">{formatDate(featuredPost.date)}</span>
               </div>
               
-              <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight group-hover:text-emerald-500 transition-colors">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight group-hover:text-emerald-500 transition-colors">
                 <Link to={`/blog/${featuredPost.slug || featuredPost._id || featuredPost.id}`}>
                   {featuredPost.title}
                 </Link>
               </h3>
               
-              <p className="text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-4">
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3 sm:line-clamp-4 text-sm sm:text-base">
                 {featuredPost.excerpt}
               </p>
               
-              <div className="flex items-center justify-between pt-4 border-t border-black/5 dark:border-white/5">
+              <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-black/5 dark:border-white/5">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-amber-400 flex items-center justify-center text-white font-bold text-xs">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-emerald-500 to-amber-400 flex items-center justify-center text-white font-bold text-xs">
                     R
                   </div>
                   <span className="text-xs font-bold text-slate-700 dark:text-slate-300">{featuredPost.author || 'Roynaldi'}</span>
                 </div>
                 <Link 
                   to={`/blog/${featuredPost.slug || featuredPost._id || featuredPost.id}`}
-                  className="clay-btn-primary !bg-emerald-500 hover:!bg-emerald-600 !px-5 !py-3 !text-xs"
+                  className="clay-btn-primary !bg-emerald-500 hover:!bg-emerald-600 !px-4 sm:!px-5 !py-2.5 sm:!py-3 !text-xs"
                 >
                   Baca Selengkapnya
                 </Link>
@@ -183,21 +183,21 @@ const Home = ({ theme }) => {
       )}
 
       {/* 3. Main Content: Grid & Sidebar */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-4 sm:pt-6">
         
         {/* Left Column: Articles Grid */}
-        <div className="lg:col-span-8 space-y-8">
+        <div className="lg:col-span-8 space-y-6 sm:space-y-8">
           
           {/* Category Tabs list */}
-          <div className="flex items-center justify-between border-b border-black/5 dark:border-white/5 pb-4">
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-3">
+          <div className="flex items-center justify-between border-b border-black/5 dark:border-white/5 pb-3 sm:pb-4">
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2 sm:gap-3">
               <span className="w-2.5 h-8 bg-amber-400 rounded-full"></span>
               {selectedCategory === 'All' ? 'Artikel Terbaru' : `Kategori: ${selectedCategory}`}
             </h2>
-            <span className="text-xs font-bold text-slate-400">{filteredPosts.length} Artikel ditemukan</span>
+            <span className="text-xs font-bold text-slate-400">{filteredPosts.length} Artikel</span>
           </div>
 
-          <div className="flex flex-wrap gap-2 overflow-x-auto pb-2">
+          <div className="flex flex-wrap gap-2 overflow-x-auto pb-2 -mx-0.5 px-0.5">
             {categories.map((cat) => (
               <button
                 key={cat}

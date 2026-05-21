@@ -141,12 +141,12 @@ const BlogDetail = () => {
 
 
   return (
-    <div className="pt-32 pb-20 max-w-4xl mx-auto px-4">
+    <div className="pt-24 sm:pt-28 md:pt-32 pb-20 max-w-4xl mx-auto px-0">
       
       {/* Breadcrumb & Navigation */}
       <Link 
         to="/" 
-        className="inline-flex items-center gap-2 text-slate-500 hover:text-emerald-500 dark:hover:text-amber-400 transition-colors mb-8 font-bold text-sm"
+        className="inline-flex items-center gap-2 text-slate-500 hover:text-emerald-500 dark:hover:text-amber-400 transition-colors mb-6 sm:mb-8 font-bold text-sm"
       >
         <i className="fas fa-arrow-left"></i> Kembali ke Beranda
       </Link>
@@ -165,7 +165,7 @@ const BlogDetail = () => {
             <span className="text-slate-400 text-xs font-bold">{formatDate(post.date)}</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight mb-8">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight mb-6 sm:mb-8">
             {post.title}
           </h1>
 
@@ -223,7 +223,7 @@ const BlogDetail = () => {
         <AdPlaceholder label="BOTTOM-ARTICLE BANNER AD" className="mt-12" />
 
         {/* Social Share Call-to-action */}
-        <div className="mt-12 pt-8 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
           <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Share this article:</span>
           <div className="flex gap-2">
             <button className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-black/5 dark:border-white/5 hover:border-emerald-500/30 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-emerald-500 cursor-pointer transition-all">
